@@ -1,18 +1,20 @@
 import re
-import pandas as pd
-import numpy as np
 from datetime import datetime
 from pathlib import Path
-from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
-from flask_wtf import FlaskForm
-from flask_mail import Mail, Message
-from wtforms.validators import DataRequired, Email, EqualTo, Length
-from wtforms import StringField, ValidationError, SubmitField, TextAreaField
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy_utils import database_exists, create_database
-from utils import create_sidebar, table_cleanup, get_results
+import numpy as np
+import pandas as pd
 import stripe
-
+from flask import Flask, flash, jsonify, redirect, render_template, request, url_for
+from flask_mail import Mail, Message
+from flask_sqlalchemy import SQLAlchemy
+from flask_wtf import FlaskForm
+from flask_admin import Admin, AdminIndexView
+from flask_admin.contrib.sqla import ModelView
+from flask_login import UserMixin, LoginManager, current_user, login_user
+from sqlalchemy_utils import create_database, database_exists
+from wtforms import StringField, SubmitField, TextAreaField, ValidationError, PasswordField
+from wtforms.validators import DataRequired, Email, EqualTo, Length
+from utils import create_sidebar, get_results, table_cleanup
 
 # -------------- Config -------------- #
 app = Flask(__name__)
@@ -25,13 +27,23 @@ app.config['MAIL_PASSWORD'] = 'mB9LrNn^0RxQPikqsj3O8b3z#MO%lv'
 app.config['SECRET_KEY'] = 'x4@q@c&1_@q4-sy9swme5wk%2mt^4nhb-p4taiw3^^vmou4l+i'
 stripe.api_key = 'sk_test_STdRsQH9I95FeiVPnI1QuWSg00HgPQXOTw'
 endpoint_secret = 'whsec_Oz4UvznVbAn8fUWWXXiEclVDAFWR7qMh'
+admin_password = '9643602Mjg$'
 
 # -------------- Extensions -------------- #
 db = SQLAlchemy(app)
 mail = Mail(app)
+login = LoginManager(app)
+
+@login.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
 
 # -------------- Models -------------- #
-class Purchases(db.Model):
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120), unique=True, nullable=False)
+
+class Purchases(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     customer_id = db.Column(db.String(120), unique=False, nullable=False) 
     session_id = db.Column(db.String(120), unique=False, nullable=False) 
@@ -42,6 +54,25 @@ class Purchases(db.Model):
     coupon = db.Column(db.String(120), unique=False, nullable=True)
     created_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
+# -------------- Admin -------------- #
+class MyAdminIndexView(AdminIndexView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('admin_login'))
+
+class MyModelView(ModelView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('admin_login'))
+
+admin = Admin(app, index_view=MyAdminIndexView())
+admin.add_view(MyModelView(Purchases, db.session))
+admin.add_view(MyModelView(User, db.session))
+
 # -------------- Forms -------------- #
 class AccessForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
@@ -51,6 +82,12 @@ class ContactForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
     body = TextAreaField("Message", validators=[DataRequired(), Length(min=5)])
     submit = SubmitField('Send')
+
+class AdminLoginForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    submit = SubmitField("Login")
+
 
 # -------------- Views -------------- #
 @app.route("/", methods=['GET', 'POST'])
@@ -70,6 +107,29 @@ def home():
         flash('Your message has been sent!', 'success')      
         contact_form.body.data = None 
     return render_template("home.html", contact_form=contact_form)
+
+
+@app.route("/admin_login", methods=['GET', 'POST'])
+def admin_login():
+    file_path = Path('picks')
+    sidebar_links = create_sidebar(file_path)
+    
+    if current_user.is_authenticated:
+    
+        return redirect(url_for('purchases.index_view'))
+
+    form = AdminLoginForm()
+
+    if form.validate_on_submit():
+        user = User.query.filter_by(name=form.username.data).first()
+
+        if user and admin_password == form.password.data:
+            login_user(user)
+            return redirect(url_for('purchases.index_view'))
+        else:
+            flash('Login Unsuccessful. Please check username and password', 'danger')
+
+    return render_template('admin_login.html', form=form, sidebar_links=sidebar_links)
 
 
 @app.route("/contact/", methods=['GET', 'POST'])
@@ -167,8 +227,8 @@ def picks(is_premium=None):
                     customer=customer,
                     customer_email=customer_email,
                     payment_method_types=["card"],
-                    success_url='http://127.0.0.1:5000/success?session_id={CHECKOUT_SESSION_ID}',
-                    cancel_url='http://127.0.0.1:5000/picks/premium/',
+                    success_url='https://gardnmi.pythonanywhere.com/success?session_id={CHECKOUT_SESSION_ID}',
+                    cancel_url='https://gardnmi.pythonanywhere.com/picks/premium/',
                     line_items=[{
                         'name':f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
                         'description': 'Access to this weeks premiums picks',
