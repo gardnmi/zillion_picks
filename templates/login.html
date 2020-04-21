@@ -1,0 +1,59 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <!-- Page Heading -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+    <img class="img-fluid" src="{{ url_for('static', filename='assets/img/undraw_vault.svg')}}" alt="" id="page_heading"/>Restricted Access
+        <!-- Sidebar Toggle (Topbar) -->
+    </nav>
+<!-- End of Topbar -->
+  
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+<div class="card shadow mb-4">
+
+    <div class="card-body">                
+    <!-- Contact Section Form-->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <form id="contactForm", method="POST", action="">
+                {{ form.hidden_tag() }}
+
+            <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>{{ form.email.label() }} </label>                     
+                        {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                
+                <div><small> You will be redirected to a stripe checkout if you haven't purchased this weeks picks.  Once paid come back and re-enter your email to access this weeks picks. </small></div>
+                <br />
+                <div id="success"></div>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-primary btn-xl") }} 
+                        <small class="text-muted">
+                        <a href="{{ url_for('contact') }}">Having Issues?</a>
+                        </small>
+                </div>
+                
+            </div>
+            </form>
+        </div>
+    </div>    
+</div>
+</div>
+
+{% endblock %}

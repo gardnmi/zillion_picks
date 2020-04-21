@@ -1,0 +1,67 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+  <!-- Page Heading -->
+  <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+      <i class="fa fa-bars"></i>
+  </button>
+  <img class="img-fluid" src="{{ url_for('static', filename='assets/img/undraw_stripe_payments.svg')}}" alt="" id="page_heading"/> Checkout
+      <!-- Sidebar Toggle (Topbar) -->
+  </nav>
+<!-- End of Topbar -->
+  <!-- Begin Page Content -->
+  <div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800"></h1>
+    <p class="mb-4"></p>
+    <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <h2 class="masthead-heading text-uppercase mb-0">Redirectiong to Stripe Checkout</h2>
+        <img class="img-fluid" src="{{ url_for('static', filename='assets/img/undraw_stripe_payments.svg')}}" alt="" /><!-- Masthead Heading-->
+    </div>
+    </header>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+function stripecheckout() {
+  var stripe = Stripe('pk_test_hVSJ3HrEvAGuJMawz1Fc3TFn00jkWBN8Nt');
+    stripe.redirectToCheckout({
+        sessionId: '{{stripe_session}}'
+        // items: [{
+        //   sku: 'sku_H35nydBXQl6hwB', 
+        //   quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+    //   successUrl: 'http://127.0.0.1:5000/picks/premium/',
+    //   cancelUrl: 'http://127.0.0.1:5000/picks/premium/',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+
+};
+
+window.setTimeout(function(){
+
+  window.onload=stripecheckout();
+
+}, 1000);
+
+</script>
+
+
+{% endblock %}

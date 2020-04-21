@@ -1,0 +1,32 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <!-- Page Heading -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+    <img class="img-fluid" src="{{ url_for('static', filename='assets/img/undraw_Data_points.svg')}}" alt="" id="page_heading"/> Charts
+        <!-- Sidebar Toggle (Topbar) -->
+    </nav>
+<!-- End of Topbar -->
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800"></h1>
+    <p class="mb-4"></p>
+    <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text-uppercase mb-0">COMING SOON!</h1>
+        <img class="img-fluid" src="{{ url_for('static', filename='assets/img/undraw_Data_points.svg')}}" alt="" /><!-- Masthead Heading-->
+    </div>
+    </header>
+</div>
+</div>
+
+
+{% endblock %}
