@@ -185,7 +185,10 @@ def picks(is_premium=None):
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
 
-    default_season, default_week = sorted((file_path/'free').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
+    if is_premium == 'premium':
+        default_season, default_week = sorted((file_path/'premium').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
+    else:
+        default_season, default_week = sorted((file_path/'free').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
 
     season = request.args.get('season', default=default_season)
     week = request.args.get('week', default=default_week)
