@@ -13,6 +13,15 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59146001-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-59146001-2');
+        </script>        
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -116,7 +125,7 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Why a Zillion Picks? While it's not actually a zillion, our algorithm makes thousands of predictions for each game and then pools those picks together to come up with the best pick possible. Each prediction has been trained with over 500 inputs covering features such as matchup history, game statistics, recruiting performance, roster dynamics, and even weather. It's like having a thousand experts collaborate and pick the best possible outcome for each game.&nbsp <a href="{{url_for('picks')}}"> Start Exploring Now!</a> </p></div>
+                    <div class="col-lg-4 ml-auto"><p class="lead">Why a Zillion Picks? While it's not actually a zillion, our algorithm makes thousands of predictions for each game and then pools those picks together to come up with the best pick possible. Each prediction has been trained with over 500 inputs covering features such as matchup history, game statistics, recruiting performance, roster dynamics and even weather. It's like having a thousand experts collaborate and pick the best possible outcome for each game.&nbsp <a href="{{url_for('picks')}}"> Start Exploring Now!</a> </p></div>
                     <div class="col-lg-4 mr-auto"><p class="lead">You can explore our past picks and results free of charge, no login required. We do not store user data and all purchases are handled through <a href=https://stripe.com>Stripe.com</a></p></div>
                 </div>
 
@@ -226,7 +235,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='assets/img/undraw_programming.svg')}}" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Why a Zillion Picks? While it's not actually a zillion, our algorithm makes thousands of predictions for each game and then pools those picks together to come up with the best pick possible. Each prediction has been trained with over 500 inputs covering features such as matchup history, game statistics, recruiting performance, roster dynamics, and even weather. It's like having a thousand experts collaborate and pick the best possible outcome for each game.</p>
+                                    <p class="mb-5">Why a Zillion Picks? While it's not actually a zillion, our algorithm makes thousands of predictions for each game and then pools those picks together to come up with the best pick possible. Each prediction has been trained with over 500 inputs covering features such as matchup history, game statistics, recruiting performance, roster dynamics and even weather. It's like having a thousand experts collaborate and pick the best possible outcome for each game.</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
