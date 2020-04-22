@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59146001-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59146001-2');
+  </script>       
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,16 +26,7 @@
   <!-- Custom styles for this page -->
   <link href="{{ url_for('static', filename='css/dataTables.bootstrap4.css') }}"  rel="stylesheet">
   <!-- Load Stripe.js on your website. -->
-  <script src="https://js.stripe.com/v3"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59146001-2"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-59146001-2');
-  </script>        
+  <script src="https://js.stripe.com/v3"></script>   
 </head>
 
 <body id="page-top">
