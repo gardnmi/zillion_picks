@@ -231,7 +231,7 @@ def picks(is_premium=None):
                     customer_email=customer_email,
                     payment_method_types=["card"],
                     success_url='https://www.zillionpicks.com/success?session_id={CHECKOUT_SESSION_ID}',
-                    cancel_url='www.google.com',
+                    cancel_url='https://www.zillionpicks.com.com/picks/premium/',
                     line_items=[{
                         'name':f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
                         'description': 'Access to this weeks premiums picks',
