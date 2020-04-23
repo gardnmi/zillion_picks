@@ -32,17 +32,6 @@ function stripecheckout() {
   var stripe = Stripe('pk_test_hVSJ3HrEvAGuJMawz1Fc3TFn00jkWBN8Nt');
     stripe.redirectToCheckout({
         sessionId: '{{stripe_session}}'
-        // items: [{
-        //   sku: 'sku_H35nydBXQl6hwB', 
-        //   quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-    //   successUrl: 'http://127.0.0.1:5000/picks/premium/',
-    //   cancelUrl: 'http://127.0.0.1:5000/picks/premium/',
     })
     .then(function (result) {
       if (result.error) {
