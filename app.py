@@ -25,8 +25,8 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'gardnmi@gmail.com'
 app.config['MAIL_PASSWORD'] = 'mB9LrNn^0RxQPikqsj3O8b3z#MO%lv'
 app.config['SECRET_KEY'] = 'x4@q@c&1_@q4-sy9swme5wk%2mt^4nhb-p4taiw3^^vmou4l+i'
-stripe.api_key = 'sk_live_p3mKPEvsDkJhj39eEyljPiHN00Hw30n89x'
-endpoint_secret = 'whsec_RM6cA7GXhD5P5QeXejuzuMjypvFwNwRB'
+stripe.api_key = 'pk_test_hVSJ3HrEvAGuJMawz1Fc3TFn00jkWBN8Nt'#'sk_live_p3mKPEvsDkJhj39eEyljPiHN00Hw30n89x'
+endpoint_secret = 'whsec_Oz4UvznVbAn8fUWWXXiEclVDAFWR7qMh'  #'whsec_RM6cA7GXhD5P5QeXejuzuMjypvFwNwRB'
 admin_password = '9643602Mjg$'
 
 # -------------- Extensions -------------- #
