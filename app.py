@@ -25,8 +25,8 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'gardnmi@gmail.com'
 app.config['MAIL_PASSWORD'] = 'mB9LrNn^0RxQPikqsj3O8b3z#MO%lv'
 app.config['SECRET_KEY'] = 'x4@q@c&1_@q4-sy9swme5wk%2mt^4nhb-p4taiw3^^vmou4l+i'
-stripe.api_key = 'sk_test_STdRsQH9I95FeiVPnI1QuWSg00HgPQXOTw'
-endpoint_secret = 'whsec_Oz4UvznVbAn8fUWWXXiEclVDAFWR7qMh'
+stripe.api_key = 'sk_live_p3mKPEvsDkJhj39eEyljPiHN00Hw30n89x'
+endpoint_secret = 'whsec_RM6cA7GXhD5P5QeXejuzuMjypvFwNwRB'
 admin_password = '9643602Mjg$'
 
 # -------------- Extensions -------------- #
@@ -230,8 +230,8 @@ def picks(is_premium=None):
                     customer=customer,
                     customer_email=customer_email,
                     payment_method_types=["card"],
-                    success_url='https://gardnmi.pythonanywhere.com/success?session_id={CHECKOUT_SESSION_ID}',
-                    cancel_url='https://gardnmi.pythonanywhere.com/picks/premium/',
+                    success_url='https://www.zillionpicks.com/success?session_id={CHECKOUT_SESSION_ID}',
+                    cancel_url='https://www.zillionpicks.com.com/picks/premium/',
                     line_items=[{
                         'name':f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
                         'description': 'Access to this weeks premiums picks',
