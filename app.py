@@ -240,8 +240,10 @@ def picks(is_premium=None):
                         'quantity': 1,
                     }],
                     )
-                               
-                return render_template("checkout.html", sidebar_links=sidebar_links, stripe_session=stripe_session.id, active=season)
+                
+                stripe_public_key = 'pk_live_ijnghAWqI97fohAXfNiOYFD9007J8FZgHU'
+                
+                return render_template("checkout.html", sidebar_links=sidebar_links, stripe_session=stripe_session.id, active=season, stripe_public_key=stripe_public_key)
         return render_template("login.html", sidebar_links=sidebar_links, form=form, active=season)    
 
     else:

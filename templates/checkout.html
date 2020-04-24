@@ -29,7 +29,7 @@
 <script type="text/javascript">
 
 function stripecheckout() {
-  var stripe = Stripe('pk_live_ijnghAWqI97fohAXfNiOYFD9007J8FZgHU');
+  var stripe = Stripe('{{stripe_public_key}}');
     stripe.redirectToCheckout({
         sessionId: '{{stripe_session}}'
     })
