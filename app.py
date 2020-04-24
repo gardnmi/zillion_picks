@@ -151,7 +151,7 @@ def contact():
         mail.send(msg)
         flash('Your message has been sent! We will get back to you as soon as possible.', 'success')      
         form.body.data = None 
-    return render_template("contact.html", form=form, sidebar_links=sidebar_links)
+    return render_template("contact.html", form=form, sidebar_links=sidebar_links, active='contact_us')
     
 
 @app.route("/success/")

@@ -89,7 +89,16 @@
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
-
+      <!-- Nav Item - Contact -->
+      {% if active == 'contact_us' %}
+      <li class="nav-item active">
+      {% else %}
+      <li class="nav-item">
+      {% endif %}   
+        <a class="nav-link" href="{{ url_for('contact') }}">
+          <i class="fas fa-fw fa-paper-plane"></i>
+          <span>Contact Us</span></a>
+      </li>
       <!-- Nav Item - About -->
       {% if active == 'about' %}
       <li class="nav-item active">
