@@ -22,7 +22,7 @@
 	window.setTimeout(function () {
 		// Move to a new location or you can do something else
 		window.location.href =
-			"{{ url_for('picks', is_premium = 'premium', flash_message='Thanks Again! To access the picks please enter the same email used for purchasing.') }}";
+			"{{ url_for('picks', is_premium = 'premium', flash_message='Thanks Again! To access please enter the same email used for your purchase.') }}";
 	}, 2000);
 </script>
 {% endblock %}
