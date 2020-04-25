@@ -99,7 +99,7 @@ def home():
         
         email = contact_form.email.data
         body = contact_form.body.data
-        msg = Message(subject=f'[Insert Name] From:<{email}>', 
+        msg = Message(subject=f'ZILLION PICKS: {email}', 
                       sender='gardnmi@gmail.com', 
                       recipients = ['gardnmi@gmail.com'],
                       body = body)
@@ -144,7 +144,7 @@ def contact():
         
         email = form.email.data
         body = form.body.data
-        msg = Message(subject=f'CUSTOMER SUPPORT From:<{email}>', 
+        msg = Message(subject=f'ZILLION PICKS: {email}', 
                       sender='gardnmi@gmail.com', 
                       recipients = ['gardnmi@gmail.com'],
                       body = body)
