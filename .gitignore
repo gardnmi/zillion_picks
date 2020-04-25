@@ -7,3 +7,4 @@ xgboost_grid_search.py
 .vscode
 __pycache__
 data/
+*.log

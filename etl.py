@@ -4,22 +4,41 @@ import re
 import time
 import urllib
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
 import requests
 from requests.exceptions import HTTPError
-
 from utils import flatten
+import logging
+from tenacity import *
+
+################ LOGGER ################
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
+
+file_handler = logging.FileHandler('etl.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 ################ EXTRACT ################
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def teams_extract(filepath):
     
     df = pd.read_json('https://api.collegefootballdata.com/teams/fbs')
     df.to_csv(filepath/'teams.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def games_extract(seasons, filepath):
     
     for season in seasons:
@@ -27,6 +46,7 @@ def games_extract(seasons, filepath):
         df.to_csv(filepath/f'seasons/{season}/games.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def games_stat_extract(seasons, teams, filepath):
     
     for season in seasons:
@@ -75,6 +95,7 @@ def games_stat_extract(seasons, teams, filepath):
             pass
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def games_advance_stats_extract(seasons, filepath):
 
     for season in seasons:
@@ -95,6 +116,8 @@ def games_advance_stats_extract(seasons, filepath):
         except ValueError:
             pass
 
+
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def talent_extract(seasons, filepath):
     
     for season in seasons:
@@ -107,12 +130,14 @@ def talent_extract(seasons, filepath):
             df.to_csv(filepath/f'seasons/{season}/talent.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def venues_extract(filepath):
     
     df = pd.read_json('https://api.collegefootballdata.com/venues')
     df.to_csv(filepath/'venues.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def lines_extract(seasons, filepath):
     
     for season in seasons:
@@ -135,6 +160,7 @@ def lines_extract(seasons, filepath):
         df.to_csv(filepath/f'seasons/{season}/lines.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def recruiting_teams_extract(seasons, filepath):
     
     for season in seasons:
@@ -143,6 +169,7 @@ def recruiting_teams_extract(seasons, filepath):
         df.to_csv(filepath/f'seasons/{season}/recruiting_teams.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def recruiting_position_extract(seasons, filepath):
     
     for season in seasons:
@@ -153,6 +180,7 @@ def recruiting_position_extract(seasons, filepath):
         df.to_csv(filepath/f'seasons/{season}/recruiting_position.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def pregame_extract(seasons, filepath):
     
     for season in seasons:
@@ -164,6 +192,7 @@ def pregame_extract(seasons, filepath):
         df.to_csv(filepath/f'seasons/{season}/pregame.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def matchup_extract(filepath):
 
     dfs = []
@@ -187,6 +216,7 @@ def matchup_extract(filepath):
     df.to_csv(filepath/'matchup.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def matchup_aggregation(filepath):
 
     dfs = []
@@ -229,6 +259,7 @@ def matchup_aggregation(filepath):
     df.to_csv(filepath/'matchup_aggregation.csv', index=False)
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def roster_aggregation(seasons, teams, filepath):
     
     for season in seasons:
@@ -263,6 +294,7 @@ def roster_aggregation(seasons, teams, filepath):
             pass
 
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
 def past_weather_extract(filepath, api_key):
     
     for file in filepath.rglob('games.csv'):
