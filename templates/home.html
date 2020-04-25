@@ -7,9 +7,8 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-59146001-2');
-        </script>                
+        </script>                        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Sports Picks" />
@@ -37,21 +36,19 @@
                 </div>
             </div>
         </nav>
-
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">   
-        
+        <header class="masthead bg-primary text-white text-center">           
             <div class="container d-flex align-items-center flex-column">
                 {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                 {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                   {{ message | safe }}
-                </div>
+                <div class="alert alert-{{ category }}">{{ message | safe }} </div>
                 {% endfor %}
                 {% endif %}
                 {% endwith %}
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5 img-fluid" src="{{ url_for('static', filename='assets/img/game_day.svg')}}" alt="" /><!-- Masthead Heading-->
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5 img-fluid" src="{{ url_for('static', filename='assets/img/game_day.svg')}}" alt="" />
+                <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Zillion Picks</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -104,14 +101,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-       
-                <!-- Picks Button-->
+            </div>      
+            <!-- Picks Button-->
             <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="{{url_for('picks')}}"><i class="fas fa-football-ball"></i> Go To Picks!</a>
             </div>
-        </section>
-        
+        </section>       
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
@@ -128,7 +123,6 @@
                     <div class="col-lg-4 ml-auto"><p class="lead">Why a Zillion Picks? While it's not actually a zillion, our algorithm makes thousands of predictions for each game and then pools those picks together to come up with the best pick possible. Each prediction has been trained with over 500 inputs covering features such as matchup history, game statistics, recruiting performance, roster dynamics and even weather. It's like having a thousand experts collaborate and pick the best possible outcome for each game.&nbsp <a href="{{url_for('picks')}}"> Start Exploring Now!</a> </p></div>
                     <div class="col-lg-4 mr-auto"><p class="lead">You can explore our past picks and results free of charge, no login required. We do not store user data and all purchases are handled through <a href=https://stripe.com>Stripe.com</a></p></div>
                 </div>
-
             </div>
         </section>
         <!-- Contact Section-->
@@ -154,9 +148,9 @@
                                     {% if contact_form.email.errors %}
                                     {{ contact_form.email(class="form-control form-control-lg is-invalid") }}
                                     <div class="invalid-feedback">
-                                       {% for error in contact_form.email.errors %}
-                                       <span>{{ error }}</span>
-                                       {% endfor %}
+                                        {% for error in contact_form.email.errors %}
+                                        <span>{{ error }}</span>
+                                        {% endfor %}
                                     </div>
                                     {% else %}                                
                                     {{ contact_form.email(class="form-control", placeholder="Email Address") }}
@@ -169,9 +163,9 @@
                                     {% if contact_form.body.errors %}
                                     {{ contact_form.body(class="form-control form-control-lg is-invalid") }}
                                     <div class="invalid-feedback">
-                                       {% for error in contact_form.body.errors %}
-                                       <span>{{ error }}</span>
-                                       {% endfor %}
+                                        {% for error in contact_form.body.errors %}
+                                        <span>{{ error }}</span>
+                                        {% endfor %}
                                     </div>
                                     {% else %}                                
                                     {{ contact_form.body(class="form-control", placeholder="Message") }}
@@ -188,7 +182,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
@@ -201,7 +194,8 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light-media btn-social mx-1" href="https://twitter.com/zillionpicks"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light-media  btn-social mx-1" href="https://www.linkedin.com/in/michael-gardner-38a29658/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light-media btn-social mx-1" href="https://twitter.com/zillionpicks"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light-media  btn-social mx-1" href="https://www.linkedin.com/in/michael-gardner-38a29658/"><i class="fab fa-fw fa-linkedin-in"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">

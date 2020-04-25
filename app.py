@@ -34,33 +34,41 @@ db = SQLAlchemy(app)
 mail = Mail(app)
 login = LoginManager(app)
 
+
 @login.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
 
 # -------------- Models -------------- #
+
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True, nullable=False)
 
+
 class Purchases(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    customer_id = db.Column(db.String(120), unique=False, nullable=False) 
-    session_id = db.Column(db.String(120), unique=False, nullable=False) 
+    customer_id = db.Column(db.String(120), unique=False, nullable=False)
+    session_id = db.Column(db.String(120), unique=False, nullable=False)
     event_id = db.Column(db.String(120), unique=False, nullable=False)
     email = db.Column(db.String(120), unique=False, nullable=False)
     product = db.Column(db.String(120), unique=False, nullable=False)
     amount = db.Column(db.Integer, unique=False, nullable=False)
     coupon = db.Column(db.String(120), unique=False, nullable=True)
-    created_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    created_date = db.Column(
+        db.DateTime, nullable=False, default=datetime.utcnow)
 
 # -------------- Admin -------------- #
+
+
 class MyAdminIndexView(AdminIndexView):
     def is_accessible(self):
         return current_user.is_authenticated
 
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('admin_login'))
+
 
 class MyModelView(ModelView):
     def is_accessible(self):
@@ -69,19 +77,24 @@ class MyModelView(ModelView):
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('admin_login'))
 
+
 admin = Admin(app, index_view=MyAdminIndexView())
 admin.add_view(MyModelView(Purchases, db.session))
 admin.add_view(MyModelView(User, db.session))
 
 # -------------- Forms -------------- #
+
+
 class AccessForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
     submit = SubmitField('Submit')
+
 
 class ContactForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
     body = TextAreaField("Message", validators=[DataRequired(), Length(min=5)])
     submit = SubmitField('Send')
+
 
 class AdminLoginForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired()])
@@ -92,20 +105,21 @@ class AdminLoginForm(FlaskForm):
 # -------------- Views -------------- #
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    flash(f"Our picks  will be FREE through Week 03. <br> <a id='flash' href= {url_for('picks')}>  Check them Out!</a>", 'success') 
+    flash(
+        f"Our picks  will be FREE through Week 03. <br> <a id='flash' href= {url_for('picks')}>  Check them Out!</a>", 'success')
 
-    contact_form = ContactForm()      
+    contact_form = ContactForm()
     if contact_form.validate_on_submit():
-        
+
         email = contact_form.email.data
         body = contact_form.body.data
-        msg = Message(subject=f'ZILLION PICKS: {email}', 
-                      sender='gardnmi@gmail.com', 
-                      recipients = ['gardnmi@gmail.com'],
-                      body = body)
+        msg = Message(subject=f'ZILLION PICKS: {email}',
+                      sender='gardnmi@gmail.com',
+                      recipients=['gardnmi@gmail.com'],
+                      body=body)
         mail.send(msg)
-        flash('Your message has been sent!', 'success')      
-        contact_form.body.data = None 
+        flash('Your message has been sent!', 'success')
+        contact_form.body.data = None
     return render_template("home.html", contact_form=contact_form)
 
 
@@ -113,9 +127,9 @@ def home():
 def admin_login():
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
-    
+
     if current_user.is_authenticated:
-    
+
         return redirect(url_for('purchases.index_view'))
 
     form = AdminLoginForm()
@@ -134,31 +148,31 @@ def admin_login():
 
 @app.route("/contact/", methods=['GET', 'POST'])
 def contact():
-    
+
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
 
-    form = ContactForm()  
+    form = ContactForm()
 
     if form.validate_on_submit():
-        
+
         email = form.email.data
         body = form.body.data
-        msg = Message(subject=f'ZILLION PICKS: {email}', 
-                      sender='gardnmi@gmail.com', 
-                      recipients = ['gardnmi@gmail.com'],
-                      body = body)
+        msg = Message(subject=f'ZILLION PICKS: {email}',
+                      sender='gardnmi@gmail.com',
+                      recipients=['gardnmi@gmail.com'],
+                      body=body)
         mail.send(msg)
-        flash('Your message has been sent! We will get back to you as soon as possible.', 'success')      
-        form.body.data = None 
+        flash('Your message has been sent! We will get back to you as soon as possible.', 'success')
+        form.body.data = None
     return render_template("contact.html", form=form, sidebar_links=sidebar_links, active='contact_us')
-    
+
 
 @app.route("/success/")
 def success():
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
-    
+
     return render_template("success.html", sidebar_links=sidebar_links)
 
 
@@ -166,7 +180,7 @@ def success():
 def charts():
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
-    
+
     return render_template("charts.html", sidebar_links=sidebar_links, active='charts')
 
 
@@ -174,21 +188,24 @@ def charts():
 def about():
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
-    
+
     return render_template("about.html", sidebar_links=sidebar_links, active='about')
 
 
 @app.route("/picks/", methods=['GET'])
 @app.route("/picks/<is_premium>/", methods=['GET', 'POST'])
-def picks(is_premium=None):
-    
+@app.route("/picks/<is_premium>/<flash_message>/", methods=['GET', 'POST'])
+def picks(is_premium=None, flash_message=None):
+
     file_path = Path('picks')
     sidebar_links = create_sidebar(file_path)
 
     if is_premium == 'premium':
-        default_season, default_week = sorted((file_path/'premium').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
+        default_season, default_week = sorted(
+            (file_path/'premium').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
     else:
-        default_season, default_week = sorted((file_path/'free').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
+        default_season, default_week = sorted(
+            (file_path/'free').rglob('*.csv'),  key=lambda f: f.stem)[-1].stem.split('_')
 
     season = request.args.get('season', default=default_season)
     week = request.args.get('week', default=default_week)
@@ -202,7 +219,7 @@ def picks(is_premium=None):
             user = Purchases.query.filter_by(email=form.email.data).first()
 
             if user:
-                purchase = Purchases.query.filter_by(email=user.email, 
+                purchase = Purchases.query.filter_by(email=user.email,
                                                      product=f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks").first()
                 customer = user.customer_id
                 customer_email = None
@@ -210,22 +227,23 @@ def picks(is_premium=None):
                 purchase = None
                 customer = None
                 customer_email = form.email.data
-            
-            if purchase:                       
+
+            if purchase:
                 df = pd.read_csv(file_path/f'premium/{season}_{week}.csv')
-                spread_results, straight_results, std_spread_results, std_straight_results = get_results(df, file_path, season, week)
+                spread_results, straight_results, std_spread_results, std_straight_results = get_results(
+                    df, file_path, season, week)
                 return render_template(
-                                    "picks.html", 
-                                    df=table_cleanup(df, week), 
-                                    sidebar_links=sidebar_links,
-                                    season=season, 
-                                    week=week,
-                                    spread_results=spread_results,
-                                    straight_results=straight_results,
-                                    std_spread_results=std_spread_results,
-                                    std_straight_results=std_straight_results,
-                                    active=season)         
-            else:         
+                    "picks.html",
+                    df=table_cleanup(df, week),
+                    sidebar_links=sidebar_links,
+                    season=season,
+                    week=week,
+                    spread_results=spread_results,
+                    straight_results=straight_results,
+                    std_spread_results=std_spread_results,
+                    std_straight_results=std_straight_results,
+                    active=season)
+            else:
                 stripe_session = stripe.checkout.Session.create(
                     customer=customer,
                     customer_email=customer_email,
@@ -233,35 +251,39 @@ def picks(is_premium=None):
                     success_url='https://www.zillionpicks.com/success?session_id={CHECKOUT_SESSION_ID}',
                     cancel_url='https://www.zillionpicks.com/picks/premium/',
                     line_items=[{
-                        'name':f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
+                        'name': f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
                         'description': 'Access to this weeks premiums picks',
                         'amount': 5000,
                         'currency': 'usd',
                         'quantity': 1,
                     }],
-                    )
-                
+                )
+
                 stripe_public_key = 'pk_live_ijnghAWqI97fohAXfNiOYFD9007J8FZgHU'
-                
+
                 return render_template("checkout.html", sidebar_links=sidebar_links, stripe_session=stripe_session.id, active=season, stripe_public_key=stripe_public_key)
-        return render_template("login.html", sidebar_links=sidebar_links, form=form, active=season)    
+        if flash_message:
+            flash(flash_message, 'success')
+
+        return render_template("login.html", sidebar_links=sidebar_links, form=form, active=season)
 
     else:
-        
-        df = pd.read_csv(file_path/f'free/{season}_{week}.csv')
-        spread_results, straight_results, std_spread_results, std_straight_results = get_results(df, file_path, season, week)
 
-        return render_template("picks.html", 
-                            df=table_cleanup(df, week), 
-                            sidebar_links=sidebar_links, 
-                            season=season, 
-                            week=week,
-                            spread_results=spread_results,
-                            straight_results=straight_results,
-                            std_spread_results=std_spread_results,
-                            std_straight_results=std_straight_results,
-                            active=season                         
-                            )
+        df = pd.read_csv(file_path/f'free/{season}_{week}.csv')
+        spread_results, straight_results, std_spread_results, std_straight_results = get_results(
+            df, file_path, season, week)
+
+        return render_template("picks.html",
+                               df=table_cleanup(df, week),
+                               sidebar_links=sidebar_links,
+                               season=season,
+                               week=week,
+                               spread_results=spread_results,
+                               straight_results=straight_results,
+                               std_spread_results=std_spread_results,
+                               std_straight_results=std_straight_results,
+                               active=season
+                               )
 
 
 @app.route("/payment_confirmation/", methods=['POST'])
@@ -271,12 +293,13 @@ def payment_confirmation():
     event = None
 
     try:
-        event = stripe.Webhook.construct_event(payload, sig_header, endpoint_secret)
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret)
 
     except ValueError:
         # Invalid payload
         return 'Invalid payload', 400
-    
+
     except stripe.error.SignatureVerificationError:
         # Invalid signature
         return 'Invalid signature', 400
@@ -292,14 +315,14 @@ def payment_confirmation():
 
         # REPLACE THESE WITH VARIABLES LIKE EMAIL
         purchase = Purchases(
-                        customer_id = event['data']['object']['customer'], 
-                        session_id = event['data']['object']['id'],
-                        event_id = event['id'],
-                        email = email,
-                        product = event['data']['object']['display_items'][0]['custom']['name'],
-                        amount = event['data']['object']['display_items'][0]['amount']          
-                    )
-        
+            customer_id=event['data']['object']['customer'],
+            session_id=event['data']['object']['id'],
+            event_id=event['id'],
+            email=email,
+            product=event['data']['object']['display_items'][0]['custom']['name'],
+            amount=event['data']['object']['display_items'][0]['amount']
+        )
+
         db.session.add(purchase)
         db.session.commit()
 

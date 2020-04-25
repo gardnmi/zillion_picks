@@ -1,40 +1,28 @@
-{% extends "dashboard.html" %}
-
-{% block content %}
-
-   <!-- Content Wrapper -->
-   <div id="content-wrapper" class="d-flex flex-column">
-
-    <!-- Main Content -->
-    <div id="content">
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-            <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800"></h1>
-            <p class="mb-4"></p>
-            <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <h1 class="masthead-heading text-uppercase mb-0">THANK YOU FOR THE PAYMENT!</h1>
-                <span class="bookTitle">(REDIRECTING TO LOG IN PAGE)</span>
-                <!-- Masthead Avatar Image--><img class="img-fluid" src="{{ url_for('static', filename='assets/img/game_day.svg')}}" alt="" /><!-- Masthead Heading-->
-            </div>
-            </header>
-    </div>
-    </div>
-    </div>
-    </div>
-
-<script>    
-    window.setTimeout(function(){
-
-      // Move to a new location or you can do something else
-      window.location.href = "{{ url_for('picks', is_premium = 'premium') }}";
-
-      }, 3000);
-
+{% extends "dashboard.html" %} {% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800"></h1>
+	<p class="mb-4"></p>
+	<header class="masthead bg-primary text-white text-center">
+		<div class="container d-flex align-items-center flex-column">
+			<h1 class="masthead-heading text-uppercase mb-0">
+				THANK YOU FOR THE PAYMENT!
+			</h1>
+			<span class="bookTitle">(REDIRECTING TO LOG IN PAGE)</span>
+			<!-- Masthead Avatar Image--><img
+				class="img-fluid"
+				src="{{ url_for('static', filename='assets/img/game_day.svg')}}"
+				alt=""
+			/><!-- Masthead Heading-->
+		</div>
+	</header>
+</div>
+<script>
+	window.setTimeout(function () {
+		// Move to a new location or you can do something else
+		window.location.href =
+			"{{ url_for('picks', is_premium = 'premium', flash_message='Thanks Again! To access the picks please enter the same email used for purchasing.') }}";
+	}, 2000);
 </script>
-
-
 {% endblock %}
