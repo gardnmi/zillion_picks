@@ -1,19 +1,6 @@
-import collections
 import pandas as pd
 import numpy as np
 from pathlib import Path
-
-
-def flatten(d, parent_key='', sep='_'):
-    # https://stackoverflow.com/questions/6027558/flatten-nested-dictionaries-compressing-keys
-    items = []
-    for k, v in d.items():
-        new_key = parent_key + sep + k if parent_key else k
-        if isinstance(v, collections.MutableMapping):
-            items.extend(flatten(v, new_key, sep=sep).items())
-        else:
-            items.append((new_key, v))
-    return dict(items)
 
 
 def create_sidebar(path):
@@ -39,19 +26,11 @@ def create_sidebar(path):
 
 def table_cleanup(df, week):
 
-    prior_cols = ['home_team', 'away_team',
-                  'pre_game_spread', 'predicted_spread', 'Spread Difference',  'actual_spread',
-                  'spread_pick', 'spread_result', 'straight_pick', 'straight_result',
-                  'home_conference', 'away_conference',
-                  'season', 'week'
-                  ]
+    prior_cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference', 'actual_spread',
+                  'spread_pick', 'spread_result', 'straight_pick', 'straight_result', 'home_conference', 'away_conference', 'season', 'week']
 
-    current_cols = ['home_team', 'away_team',
-                    'pre_game_spread', 'predicted_spread', 'Spread Difference',
-                    'spread_pick', 'straight_pick',
-                    'home_conference', 'away_conference',
-                    'season', 'week'
-                    ]
+    current_cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference',
+                    'spread_pick', 'straight_pick', 'home_conference', 'away_conference', 'season', 'week']
 
     prior_col_names = {
         'season': 'Season',
@@ -66,8 +45,7 @@ def table_cleanup(df, week):
         'straight_pick': 'Straight Up Pick',
         'actual_spread': 'Actual Spread',
         'spread_result': 'Spread Result',
-        'straight_result': 'Straight Up Result'
-    }
+        'straight_result': 'Straight Up Result'}
 
     current_col_names = {
         'season': 'Season',
@@ -79,8 +57,7 @@ def table_cleanup(df, week):
         'pre_game_spread': 'Vegas Spread',
         'predicted_spread': 'Predicted Outcome',
         'spread_pick': 'Spread Pick',
-        'straight_pick': 'Straight Up Pick'
-    }
+        'straight_pick': 'Straight Up Pick'}
 
     df['Spread Difference'] = np.abs(
         df['predicted_spread'] - df['pre_game_spread'])
@@ -130,15 +107,19 @@ def get_results(df, filepath, season, week):
         if week == '01' and len(spread_results) == 0:
             files_df = files_df[files_df['Season'].astype(
                 int) == (int(season) - 1)]
+
         elif week == 'postseason' and len(spread_results) > 0:
             files_df = files_df[files_df['Season'].astype(
                 int) == df['season'].unique()[0]]
+
         elif week == 'postseason' and len(spread_results) == 0:
             files_df = files_df[(files_df['Week Nums'].isnull()) & (
                 files_df['Season'].astype(int) == df['season'].unique()[0])]
+
         elif len(spread_results) > 0:
             files_df = files_df[(files_df['Week Nums'].map(lambda x: int(x)) <= df['week'].unique()[
                                  0]) & (files_df['Season'].astype(int) == df['season'].unique()[0])]
+
         else:
             files_df = files_df[(files_df['Week Nums'].map(lambda x: int(x)) < df['week'].unique()[
                                  0]) & (files_df['Season'].astype(int) == df['season'].unique()[0])]

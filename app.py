@@ -14,7 +14,7 @@ from flask_login import UserMixin, LoginManager, current_user, login_user
 from sqlalchemy_utils import create_database, database_exists
 from wtforms import StringField, SubmitField, TextAreaField, ValidationError, PasswordField
 from wtforms.validators import DataRequired, Email, EqualTo, Length
-from utils import create_sidebar, get_results, table_cleanup
+from helper import create_sidebar, get_results, table_cleanup
 
 # -------------- Config -------------- #
 app = Flask(__name__)
@@ -101,8 +101,9 @@ class AdminLoginForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
-
 # -------------- Views -------------- #
+
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     flash(
@@ -194,7 +195,6 @@ def about():
 
 @app.route("/picks/", methods=['GET'])
 @app.route("/picks/<is_premium>/", methods=['GET', 'POST'])
-@app.route("/picks/<is_premium>/<flash_message>/", methods=['GET', 'POST'])
 def picks(is_premium=None, flash_message=None):
 
     file_path = Path('picks')
@@ -209,15 +209,13 @@ def picks(is_premium=None, flash_message=None):
 
     season = request.args.get('season', default=default_season)
     week = request.args.get('week', default=default_week)
+    flash_message = request.args.get('flash_message', default=None)
 
     if is_premium == 'premium':
-
         form = AccessForm()
-
         if form.validate_on_submit():
-            # VALIDATE THE PURCHASE
+            # Validates Purchase
             user = Purchases.query.filter_by(email=form.email.data).first()
-
             if user:
                 purchase = Purchases.query.filter_by(email=user.email,
                                                      product=f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks").first()
@@ -232,6 +230,7 @@ def picks(is_premium=None, flash_message=None):
                 df = pd.read_csv(file_path/f'premium/{season}_{week}.csv')
                 spread_results, straight_results, std_spread_results, std_straight_results = get_results(
                     df, file_path, season, week)
+
                 return render_template(
                     "picks.html",
                     df=table_cleanup(df, week),
@@ -256,12 +255,12 @@ def picks(is_premium=None, flash_message=None):
                         'amount': 5000,
                         'currency': 'usd',
                         'quantity': 1,
-                    }],
-                )
+                    }],)
 
                 stripe_public_key = 'pk_live_ijnghAWqI97fohAXfNiOYFD9007J8FZgHU'
 
                 return render_template("checkout.html", sidebar_links=sidebar_links, stripe_session=stripe_session.id, active=season, stripe_public_key=stripe_public_key)
+
         if flash_message:
             flash(flash_message, 'success')
 
