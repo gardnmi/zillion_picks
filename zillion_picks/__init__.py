@@ -21,7 +21,7 @@ admin = Admin()
 def create_app():
     """Create Flask application."""
     app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
+    app.config.from_object(ProductionConfig)
 
     # Admin Index View
     class MyAdminIndexView(AdminIndexView):
