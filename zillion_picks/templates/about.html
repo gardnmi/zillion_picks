@@ -1,0 +1,123 @@
+{% extends "dashboard.html" %} {% block content %}
+<!-- Topbar -->
+<nav
+	class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+>
+	<button
+		id="sidebarToggleTop"
+		class="btn btn-link d-md-none rounded-circle mr-3"
+	>
+		<i class="fa fa-bars"></i>
+	</button>
+	<img
+		class="img-fluid"
+		src="{{ url_for('static', filename='assets/img/undraw_detailed_analysis.svg')}}"
+		alt=""
+		id="page_heading"
+	/>About
+</nav>
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<div class="card shadow mb-4">
+		<div class="card-body">
+			<h2 id="what-we-do">What we do:</h2>
+			<p>
+				We provide college football picks for the Spread and Straight-Up bets.
+				Every pick is updated daily until game day so you can be assured you
+				have the most accurate pick possible.
+			</p>
+			<h2 id="how-we-do-it">How we do it:</h2>
+			<p>
+				Each day we scrape the web to get the most up to date data available.
+				This information is then fed into our ensemble of machine learning
+				models which in turn provides a non-biased prediction for each and every
+				game. The predicted outcome is captured in the
+				<strong>Predicted Outcome</strong> field in the Picks Tables.
+			</p>
+			<h2 id="picks-table">Picks Table</h2>
+			<p>
+				The current week’s Picks Table is updated daily until game day. Most
+				fields are self-explanatory but for those fields that may be not be so
+				easily understood we've provided explanations below .
+			</p>
+			<table class="table table-bordered" width="100%" cellspacing="0">
+				<thead>
+					<tr>
+						<th>Field</th>
+						<th>Definition</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Vegas Spread</td>
+						<td>
+							This is the average spread consensus from the most popular online
+							sportsbooks. Negative number favors the home team and vice versa.
+						</td>
+					</tr>
+					<tr>
+						<td>Predicted Outcome</td>
+						<td>
+							This is our algorithm prediction for the result of the game.
+							Negative number favors the home team and vice versa
+						</td>
+					</tr>
+					<tr>
+						<td>Spread Difference</td>
+						<td>
+							The difference between the Vegas Spread and Predicted Outcome. A
+							bigger difference could indicate a bad spread set by Vegas and a
+							betting opportunity but this is not a guarantee.
+						</td>
+					</tr>
+					<tr>
+						<td>Actual Spread</td>
+						<td>
+							The actual result of the game. A negative score means the home
+							team won and vice versa. i.e. -10 means the home team won by 10
+						</td>
+					</tr>
+					<tr>
+						<td>Spread Pick</td>
+						<td>
+							Our pick based on the difference between the Vegas Spread and Our
+							Predicted Outcome. i.e. if Vegas Spread -7 and Predicted Outcome
+							-9 we pick the home team or if Vegas Spread -7 and Predicted
+							Outcome -3 we pick the away team
+						</td>
+					</tr>
+					<tr>
+						<td>Straight Up Pick</td>
+						<td>
+							Our pick based on the Predicted Outcome. i.e. if Predicted Outcome
+							is -7 we pick the home team or if Predicted Outcome is 7 we pick
+							the away team
+						</td>
+					</tr>
+					<tr>
+						<td>Spread / Straight Up Result</td>
+						<td>
+							Only found in a prior week picks. This indicates if our pick won
+							or lost.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<h2 id="privacy-and-security">Privacy and Security</h2>
+			<p>
+				We do not store any credit card information. All purchases are handled
+				through Stripe’s secure API.
+			</p>
+			<h2 id="road-map">Road Map</h2>
+			<ul>
+				<li>Pick Confidence Score</li>
+				<li>Individual Picks</li>
+				<li>Betting Analytics Dashboard</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

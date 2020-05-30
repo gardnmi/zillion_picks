@@ -8,3 +8,4 @@ xgboost_grid_search.py
 __pycache__
 data/
 *.log
+.env

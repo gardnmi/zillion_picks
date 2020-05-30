@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import stripe
-from flask import Flask, flash, jsonify, redirect, render_template, request, url_for
+from flask import Flask, flash, jsonify, redirect, render_template, request, url_for, current_app
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -18,29 +18,26 @@ from helper import create_sidebar, get_results, table_cleanup
 
 # -------------- Config -------------- #
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'gardnmi@gmail.com'
-app.config['MAIL_PASSWORD'] = 'bsxkydirsncnuhyt'
-app.config['SECRET_KEY'] = 'x4@q@c&1_@q4-sy9swme5wk%2mt^4nhb-p4taiw3^^vmou4l+i'
-stripe.api_key = 'sk_live_p3mKPEvsDkJhj39eEyljPiHN00Hw30n89x'
-endpoint_secret = 'whsec_RM6cA7GXhD5P5QeXejuzuMjypvFwNwRB'
-admin_password = '9643602Mjg$'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+# app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+# app.config['MAIL_PORT'] = 587
+# app.config['MAIL_USE_TLS'] = True
+# app.config['MAIL_USERNAME'] = 'gardnmi@gmail.com'
+# app.config['MAIL_PASSWORD'] = 'bsxkydirsncnuhyt'
+# app.config['SECRET_KEY'] = 'x4@q@c&1_@q4-sy9swme5wk%2mt^4nhb-p4taiw3^^vmou4l+i'
+stripe.api_key = current_app.config['STRIPE_API_KEY']
+endpoint_secret = current_app.config['STRIPE_ENDPOINT_SECRET']
+admin_password = current_app.config['ADMIN_PASSWORD']
 
 # -------------- Extensions -------------- #
 db = SQLAlchemy(app)
 mail = Mail(app)
 login = LoginManager(app)
 
-
+# -------------- Models -------------- #
 @login.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
-
-# -------------- Models -------------- #
-
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -61,6 +58,8 @@ class Purchases(UserMixin, db.Model):
 
 # -------------- Admin -------------- #
 
+# Move into BluePrint
+# https://stackoverflow.com/questions/28508723/how-do-i-properly-set-up-flask-admin-views-with-using-an-application-factory
 
 class MyAdminIndexView(AdminIndexView):
     def is_accessible(self):
