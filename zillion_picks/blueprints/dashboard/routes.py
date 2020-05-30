@@ -76,7 +76,7 @@ def picks(is_premium=None, flash_message=None):
                     line_items=[{
                         'name': f"{season} {(lambda x: 'Week '+ x if x != 'postseason' else 'Post Season') (week)} Premium Picks",
                         'description': 'Access to this weeks premiums picks',
-                        'amount': 100,
+                        'amount': 5000,
                         'currency': 'usd',
                         'quantity': 1,
                     }],)
