@@ -11,7 +11,6 @@ from zillion_picks.blueprints.dashboard.forms import AccessForm, ContactForm, Ad
 
 dashboard_bp = Blueprint('dashboard_bp', __name__)
 
-print(current_app.config)
 stripe.api_key = current_app.config['STRIPE_API_KEY']
 endpoint_secret = current_app.config['STRIPE_ENDPOINT_SECRET']
 
