@@ -26,13 +26,10 @@ def create_sidebar(path):
 
 def table_cleanup(df, week):
 
-    prior_cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference', 'actual_spread',
-                  'spread_pick', 'spread_result', 'straight_pick', 'straight_result', 'home_conference', 'away_conference', 'season', 'week']
+    cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference', 'actual_spread',
+            'spread_pick', 'spread_result', 'straight_pick', 'straight_result', 'home_conference', 'away_conference', 'season', 'week']
 
-    current_cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference',
-                    'spread_pick', 'straight_pick', 'home_conference', 'away_conference', 'season', 'week']
-
-    prior_col_names = {
+    col_names = {
         'season': 'Season',
         'week': 'Week',
         'home_team': 'Home Team',
@@ -47,18 +44,6 @@ def table_cleanup(df, week):
         'spread_result': 'Spread Result',
         'straight_result': 'Straight Up Result'}
 
-    current_col_names = {
-        'season': 'Season',
-        'week': 'Week',
-        'home_team': 'Home Team',
-        'home_conference': 'Home Conference',
-        'away_team': 'Away Team',
-        'away_conference': 'Away Conference',
-        'pre_game_spread': 'Vegas Spread',
-        'predicted_spread': 'Predicted Outcome',
-        'spread_pick': 'Spread Pick',
-        'straight_pick': 'Straight Up Pick'}
-
     df['Spread Difference'] = np.abs(
         df['predicted_spread'] - df['pre_game_spread'])
 
@@ -67,12 +52,10 @@ def table_cleanup(df, week):
     else:
         pass
 
-    try:
-        df = df[prior_cols]
-        df = df.rename(columns=prior_col_names)
-    except:
-        df = df[current_cols]
-        df = df.rename(columns=current_col_names)
+    df = df[cols]
+    df = df.rename(columns=col_names)
+
+    df = df.fillna('TBD')
 
     return df
 

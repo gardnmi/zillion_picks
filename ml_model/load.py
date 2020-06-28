@@ -1,5 +1,6 @@
 from extract import *
 from transform import *
+from datetime import datetime
 
 
 def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, update_data=True, update_seasons=[pd.to_datetime('today').year]):
@@ -54,8 +55,8 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
 
     games_df = games_df[(games_df.season < predict_season) | (
         (games_df.week <= predict_week) & (games_df.season == predict_season))]
-    # weather_df = past_weather_transform(filepath=filepath)
 
+    # weather_df = past_weather_transform(filepath=filepath)
     games_df['spread_target'] = games_df['away_points'] - \
         games_df['home_points']
 

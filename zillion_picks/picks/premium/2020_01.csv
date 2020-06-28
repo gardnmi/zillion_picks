@@ -1,0 +1,13 @@
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
+401206213,2020,1,regular,Arizona,Pac-12,Hawai'i,Mountain West,-10.5,-22.0,Arizona,Arizona,,2020-08-29 04:00:00+00:00,,
+401207204,2020,1,regular,Navy,American Athletic,Notre Dame,FBS Independents,16.5,13.5,Navy,Notre Dame,,2020-08-29 04:00:00+00:00,,
+401207805,2020,1,regular,Georgia Tech,ACC,Clemson,ACC,26.0,33.5,Clemson,Clemson,,2020-09-03 04:00:00+00:00,,
+401206217,2020,1,regular,Utah,Pac-12,BYU,FBS Independents,-6.5,-16.5,Utah,Utah,,2020-09-03 04:00:00+00:00,,
+401207807,2020,1,regular,Boston College,ACC,Syracuse,ACC,0.0,-6.0,Boston College,Boston College,,2020-09-04 04:00:00+00:00,,
+401207808,2020,1,regular,UCF,American Athletic,North Carolina,ACC,-3.0,-6.0,UCF,UCF,,2020-09-04 04:00:00+00:00,,
+401206985,2020,1,regular,Wisconsin,Big Ten,Indiana,Big Ten,-12.5,-15.5,Wisconsin,Wisconsin,,2020-09-04 04:00:00+00:00,,
+401205855,2020,1,regular,Baylor,Big 12,Ole Miss,SEC,-1.0,-1.5,Baylor,Baylor,,2020-09-05 04:00:00+00:00,,
+401206225,2020,1,regular,Washington,Pac-12,Michigan,Big Ten,1.5,2.5,Michigan,Michigan,,2020-09-05 04:00:00+00:00,,
+401206958,2020,1,regular,West Virginia,Big 12,Florida State,ACC,6.5,21.0,Florida State,Florida State,,2020-09-05 04:00:00+00:00,,
+401205729,2020,1,regular,USC,Pac-12,Alabama,SEC,14.0,33.5,Alabama,Alabama,,2020-09-05 04:00:00+00:00,,
+401205862,2020,1,regular,Virginia,ACC,Georgia,SEC,18.0,32.0,Georgia,Georgia,,2020-09-07 04:00:00+00:00,,
