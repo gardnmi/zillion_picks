@@ -1,8 +1,8 @@
 archive/
+.ipynb_checkpoints
 tpot_log/
 *.db
 xgboost_grid_search.py
-*.ipynb
 *.pyc
 .vscode
 __pycache__
