@@ -66,16 +66,6 @@
           </div>
         </li>
         {% endfor %}
-        <!-- Nav Item - Charts -->
-        {% if active == 'charts' %}
-        <li class="nav-item active">
-        {% else %}
-        <li class="nav-item">
-        {% endif %}   
-          <a class="nav-link" href="{{url_for('dashboard_bp.charts')}}">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-        </li>
         <!-- Nav Item - Contact -->
         {% if active == 'contact_us' %}
         <li class="nav-item active">

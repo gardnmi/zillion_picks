@@ -27,11 +27,12 @@ def create_sidebar(path):
 def table_cleanup(df, week):
 
     cols = ['home_team', 'away_team', 'pre_game_spread', 'predicted_spread', 'Spread Difference', 'actual_spread',
-            'spread_pick', 'spread_result', 'straight_pick', 'straight_result', 'home_conference', 'away_conference', 'season', 'week']
+            'spread_pick', 'spread_result', 'straight_pick', 'straight_result', 'home_conference', 'away_conference', 'season', 'week', 'start_date']
 
     col_names = {
         'season': 'Season',
         'week': 'Week',
+        'start_date', 'Date',
         'home_team': 'Home Team',
         'home_conference': 'Home Conference',
         'away_team': 'Away Team',

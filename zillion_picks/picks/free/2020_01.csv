@@ -1,6 +1,6 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
 401238035,2020,1,regular,UAB,Conference USA,Central Arkansas,MISSING,-21.0,-29.0,UAB,UAB,-10.0,2020-09-04 00:00:00+00:00,Lost,Won
 401207101,2020,1,regular,Southern Mississippi,Conference USA,South Alabama,Sun Belt,-12.5,-2.5,South Alabama,Southern Mississippi,11.0,2020-09-04 01:00:00+00:00,Won,Lost
-401235700,2020,1,regular,Army,FBS Independents,Middle Tennessee,Conference USA,-4.0,-16.5,Army,Army,,2020-09-05 17:30:00+00:00,,
-401212484,2020,1,regular,Texas State,Sun Belt,SMU,American Athletic,23.0,29.5,SMU,SMU,,2020-09-05 20:30:00+00:00,,
-401234576,2020,1,regular,Navy,American Athletic,BYU,FBS Independents,2.0,-2.5,Navy,Navy,,2020-09-08 00:00:00+00:00,,
+401235700,2020,1,regular,Army,FBS Independents,Middle Tennessee,Conference USA,-4.0,-16.5,Army,Army,-42.0,2020-09-05 17:30:00+00:00,Won,Won
+401212484,2020,1,regular,Texas State,Sun Belt,SMU,American Athletic,23.0,29.5,SMU,SMU,7.0,2020-09-05 20:30:00+00:00,Lost,Won
+401234576,2020,1,regular,Navy,American Athletic,BYU,FBS Independents,1.0,-8.0,Navy,Navy,,2020-09-08 00:00:00+00:00,,
