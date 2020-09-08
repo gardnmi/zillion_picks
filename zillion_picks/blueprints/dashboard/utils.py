@@ -32,7 +32,7 @@ def table_cleanup(df, week):
     col_names = {
         'season': 'Season',
         'week': 'Week',
-        'start_date', 'Date',
+        'start_date': 'Date',
         'home_team': 'Home Team',
         'home_conference': 'Home Conference',
         'away_team': 'Away Team',
