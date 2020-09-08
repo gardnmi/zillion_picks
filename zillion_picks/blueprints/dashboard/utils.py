@@ -53,7 +53,7 @@ def table_cleanup(df, week):
     else:
         pass
 
-    df['start_date'] = df['start_date'].dt.date
+    df['start_date'] = pd.to_datetime(df['start_date']).dt.date
 
     df = df[cols]
     df = df.rename(columns=col_names)
