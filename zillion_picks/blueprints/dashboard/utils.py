@@ -41,7 +41,7 @@ def table_cleanup(df, week):
         'predicted_spread': 'Zillion Picks Spread',
         'spread_pick': 'Spread Pick',
         'straight_pick': 'Straight Up Pick',
-        'actual_spread': 'Actual Spread',
+        'actual_spread': 'Final Game Result Spread',
         'spread_result': 'Spread Result',
         'straight_result': 'Straight Up Result'}
 
@@ -58,7 +58,7 @@ def table_cleanup(df, week):
     df = df[cols]
     df = df.rename(columns=col_names)
 
-    df = df.fillna('TBD')
+    df = df.fillna('Awaiting Game Results')
 
     return df
 
