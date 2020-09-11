@@ -201,9 +201,13 @@
 					<tbody>
 						{% for row in df.iterrows() %}
 						<tr>
-							{% for value in row[1].values %}
+							{% for value in row[1].values %} {% if value == 'Won' %}
+							<td class="winColor">{{value}}</td>
+							{% elif value == 'Lost' %}
+							<td class="lostColor">{{value}}</td>
+							{% else %}
 							<td>{{value}}</td>
-							{% endfor %}
+							{% endif %} {% endfor %}
 						</tr>
 						{% endfor %}
 					</tbody>
