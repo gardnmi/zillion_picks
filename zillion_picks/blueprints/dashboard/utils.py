@@ -37,7 +37,7 @@ def table_cleanup(df, week):
         'home_conference': 'Home Conference',
         'away_team': 'Away Team',
         'away_conference': 'Away Conference',
-        'pre_game_spread': 'Bookie Spread (Avg)',
+        'pre_game_spread': 'Sportsbook Spread (Avg)',
         'predicted_spread': 'Zillion Picks Spread',
         'spread_pick': 'Spread Pick',
         'straight_pick': 'Straight Up Pick',
