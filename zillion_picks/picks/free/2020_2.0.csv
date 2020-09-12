@@ -1,0 +1,23 @@
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
+401234559,2020,2.0,regular,Miami,ACC,UAB,Conference USA,-14.5,-20.5,Miami,Miami,-17.0,2020-09-11 00:00:00+00:00,Won,Won
+401236081,2020,2.0,regular,Appalachian State,Sun Belt,Charlotte,Conference USA,-17.0,-24.5,Appalachian State,Appalachian State,-15.0,2020-09-12 16:00:00+00:00,Lost,Won
+401236053,2020,2.0,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-13.0,-21.5,Kansas State,Kansas State,4.0,2020-09-12 16:00:00+00:00,Lost,Lost
+401236038,2020,2.0,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-44.5,-45.0,West Virginia,West Virginia,-46.0,2020-09-12 16:00:00+00:00,Won,Won
+401236221,2020,2.0,regular,Iowa State,Big 12,Louisiana,Sun Belt,-11.0,-20.0,Iowa State,Iowa State,17.0,2020-09-12 16:00:00+00:00,Lost,Lost
+401234565,2020,2.0,regular,North Carolina,ACC,Syracuse,ACC,-24.0,-24.0,North Carolina,North Carolina,-25.0,2020-09-12 16:00:00+00:00,Lost,Won
+401240296,2020,2.0,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-33.5,Baylor,Baylor,,2020-09-12 16:00:00+00:00,,
+401240113,2020,2.0,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-25.0,-34.0,Army,Army,,2020-09-12 17:30:00+00:00,,
+401234574,2020,2.0,regular,Notre Dame,FBS Independents,Duke,ACC,-22.5,-51.5,Notre Dame,Notre Dame,,2020-09-12 18:30:00+00:00,,
+401207113,2020,2.0,regular,Texas State,Sun Belt,UT San Antonio,Conference USA,-6.0,-23.5,Texas State,Texas State,,2020-09-12 19:30:00+00:00,,
+401234563,2020,2.0,regular,Florida State,ACC,Georgia Tech,ACC,-13.5,36.0,Georgia Tech,Georgia Tech,,2020-09-12 20:00:00+00:00,,
+401240233,2020,2.0,regular,Pittsburgh,ACC,Austin Peay,MISSING,-31.0,19.0,Austin Peay,Austin Peay,,2020-09-12 20:00:00+00:00,,
+401215298,2020,2.0,regular,Georgia Southern,Sun Belt,Campbell,MISSING,-31.0,-40.0,Georgia Southern,Georgia Southern,,2020-09-12 20:14:00+00:00,,
+401236054,2020,2.0,regular,Oklahoma,Big 12,Missouri State,MISSING,-50.0,-40.0,Missouri State,Oklahoma,,2020-09-12 23:00:00+00:00,,
+401240039,2020,2.0,regular,South Florida,American Athletic,The Citadel,MISSING,-17.0,-16.5,The Citadel,South Florida,,2020-09-12 23:00:00+00:00,,
+401234562,2020,2.0,regular,Wake Forest,ACC,Clemson,ACC,35.0,-10.0,Wake Forest,Wake Forest,,2020-09-12 23:30:00+00:00,,
+401239973,2020,2.0,regular,South Alabama,Sun Belt,Tulane,American Athletic,10.5,-23.5,South Alabama,South Alabama,,2020-09-12 23:30:00+00:00,,
+401236222,2020,2.0,regular,Texas,Big 12,UTEP,Conference USA,-44.0,,UTEP,UTEP,,2020-09-13 00:00:00+00:00,,
+401236039,2020,2.0,regular,Texas Tech,Big 12,Houston Baptist,MISSING,-41.5,,Houston Baptist,Houston Baptist,,2020-09-13 00:00:00+00:00,,
+401234564,2020,2.0,regular,Louisville,ACC,Western Kentucky,Conference USA,-13.0,,Western Kentucky,Western Kentucky,,2020-09-13 00:00:00+00:00,,
+401236658,2020,2.0,regular,Kansas,Big 12,Coastal Carolina,Sun Belt,-6.0,,Coastal Carolina,Coastal Carolina,,2020-09-13 02:00:00+00:00,,
+401236041,2020,2.0,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-22.0,,Tulsa,Tulsa,,2020-09-19 16:00:00+00:00,,
