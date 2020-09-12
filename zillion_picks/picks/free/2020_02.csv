@@ -1,13 +1,13 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
 401234559,2020,2,regular,Miami,ACC,UAB,Conference USA,-14.5,-20.5,Miami,Miami,-17.0,2020-09-11 00:00:00+00:00,Won,Won
-401236053,2020,2,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-14.5,-1.5,Arkansas State,Kansas State,4.0,2020-09-12 16:00:00+00:00,Won,Lost
-401236221,2020,2,regular,Iowa State,Big 12,Louisiana,Sun Belt,-13.5,-13.0,Louisiana,Iowa State,17.0,2020-09-12 16:00:00+00:00,Won,Lost
-401236081,2020,2,regular,Appalachian State,Sun Belt,Charlotte,Conference USA,-16.5,-26.5,Appalachian State,Appalachian State,-15.0,2020-09-12 16:00:00+00:00,Lost,Won
-401236038,2020,2,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-41.0,-46.0,West Virginia,West Virginia,-46.0,2020-09-12 16:00:00+00:00,Won,Won
-401234565,2020,2,regular,North Carolina,ACC,Syracuse,ACC,-24.0,-24.5,North Carolina,North Carolina,-25.0,2020-09-12 16:00:00+00:00,Won,Won
+401236053,2020,2,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-14.5,-1.5,Arkansas State,Kansas State,,2020-09-12 16:00:00+00:00,,
+401236221,2020,2,regular,Iowa State,Big 12,Louisiana,Sun Belt,-13.5,-13.0,Louisiana,Iowa State,,2020-09-12 16:00:00+00:00,,
+401236081,2020,2,regular,Appalachian State,Sun Belt,Charlotte,Conference USA,-16.5,-26.5,Appalachian State,Appalachian State,,2020-09-12 16:00:00+00:00,,
+401236038,2020,2,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-41.0,-46.0,West Virginia,West Virginia,,2020-09-12 16:00:00+00:00,,
+401234565,2020,2,regular,North Carolina,ACC,Syracuse,ACC,-24.0,-24.5,North Carolina,North Carolina,,2020-09-12 16:00:00+00:00,,
 401240296,2020,2,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-25.5,Baylor,Baylor,,2020-09-12 16:00:00+00:00,,
-401240113,2020,2,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-24.5,-40.5,Army,Army,-30.0,2020-09-12 17:30:00+00:00,Won,Won
-401234574,2020,2,regular,Notre Dame,FBS Independents,Duke,ACC,-21.5,-18.5,Duke,Notre Dame,-14.0,2020-09-12 18:30:00+00:00,Won,Won
+401240113,2020,2,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-24.5,-40.5,Army,Army,,2020-09-12 17:30:00+00:00,,
+401234574,2020,2,regular,Notre Dame,FBS Independents,Duke,ACC,-21.5,-18.5,Duke,Notre Dame,,2020-09-12 18:30:00+00:00,,
 401207113,2020,2,regular,Texas State,Sun Belt,UT San Antonio,Conference USA,-6.0,-9.5,Texas State,Texas State,,2020-09-12 19:30:00+00:00,,
 401234563,2020,2,regular,Florida State,ACC,Georgia Tech,ACC,-13.5,-21.0,Florida State,Florida State,,2020-09-12 20:00:00+00:00,,
 401240233,2020,2,regular,Pittsburgh,ACC,Austin Peay,MISSING,-31.0,-34.5,Pittsburgh,Pittsburgh,,2020-09-12 20:00:00+00:00,,
