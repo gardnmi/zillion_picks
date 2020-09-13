@@ -64,7 +64,7 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
     core_columns = ['game_id', 'season', 'week', 'season_type', 'neutral_site', 'conference_game',
                     'attendance', 'venue_id', 'venue', 'home_team', 'home_conference',
                     'home_post_win_prob', 'away_team', 'away_conference',
-                    'away_post_win_prob', 'excitement_index', 'start_date',
+                    'away_post_win_prob', 'start_date',
                     'spread_target']
 
     # Game Stats
