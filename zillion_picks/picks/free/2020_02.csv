@@ -5,7 +5,7 @@ game_id,season,week,season_type,home_team,home_conference,away_team,away_confere
 401236221,2020,2,regular,Iowa State,Big 12,Louisiana,Sun Belt,-13.5,-17.0,Iowa State,Iowa State,17.0,2020-09-12 16:00:00+00:00,Lost,Lost
 401236038,2020,2,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-41.0,-44.0,West Virginia,West Virginia,-46.0,2020-09-12 16:00:00+00:00,Won,Won
 401236053,2020,2,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-14.5,-14.5,Kansas State,Kansas State,4.0,2020-09-12 16:00:00+00:00,Lost,Lost
-401240296,2020,2,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-21.5,Baylor,Baylor,0.0,2020-09-12 16:00:00+00:00,Lost,Lost
+401240296,2020,2,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-21.5,Baylor,Baylor,,2020-09-12 16:00:00+00:00,,
 401240113,2020,2,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-24.5,-16.5,Louisiana Monroe,Army,-30.0,2020-09-12 17:30:00+00:00,Lost,Won
 401234574,2020,2,regular,Notre Dame,FBS Independents,Duke,ACC,-21.5,-21.0,Duke,Notre Dame,-14.0,2020-09-12 18:30:00+00:00,Won,Won
 401207113,2020,2,regular,Texas State,Sun Belt,UT San Antonio,Conference USA,-6.0,-4.5,UT San Antonio,Texas State,3.0,2020-09-12 19:30:00+00:00,Won,Lost
