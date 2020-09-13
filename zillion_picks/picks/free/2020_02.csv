@@ -19,5 +19,5 @@ game_id,season,week,season_type,home_team,home_conference,away_team,away_confere
 401236222,2020,2,regular,Texas,Big 12,UTEP,Conference USA,-44.0,-41.0,UTEP,Texas,-56.0,2020-09-13 00:00:00+00:00,Lost,Won
 401236039,2020,2,regular,Texas Tech,Big 12,Houston Baptist,MISSING,-40.0,-39.5,Houston Baptist,Texas Tech,-2.0,2020-09-13 00:00:00+00:00,Won,Won
 401234564,2020,2,regular,Louisville,ACC,Western Kentucky,Conference USA,-13.5,-16.0,Louisville,Louisville,-14.0,2020-09-13 00:00:00+00:00,Won,Won
-401236658,2020,2,regular,Kansas,Big 12,Coastal Carolina,Sun Belt,-6.5,-8.0,Kansas,Kansas,,2020-09-13 02:00:00+00:00,,
-401236041,2020,2,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-22.0,-23.0,Oklahoma State,Oklahoma State,,2020-09-19 16:00:00+00:00,,
+401236658,2020,2,regular,Kansas,Big 12,Coastal Carolina,Sun Belt,-6.5,-8.0,Kansas,Kansas,15.0,2020-09-13 02:00:00+00:00,Lost,Lost
+401236041,2020,2,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-22.0,-24.0,Oklahoma State,Oklahoma State,,2020-09-19 16:00:00+00:00,,
