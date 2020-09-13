@@ -1,23 +1,23 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
-401234559,2020,2,regular,Miami,ACC,UAB,Conference USA,-14.5,-20.5,Miami,Miami,-17.0,2020-09-11 00:00:00+00:00,Won,Won
-401236081,2020,2,regular,Appalachian State,Sun Belt,Charlotte,Conference USA,-16.5,-22.5,Appalachian State,Appalachian State,-15.0,2020-09-12 16:00:00+00:00,Lost,Won
-401234565,2020,2,regular,North Carolina,ACC,Syracuse,ACC,-24.0,-18.5,Syracuse,North Carolina,-25.0,2020-09-12 16:00:00+00:00,Lost,Won
-401236221,2020,2,regular,Iowa State,Big 12,Louisiana,Sun Belt,-13.5,-17.0,Iowa State,Iowa State,17.0,2020-09-12 16:00:00+00:00,Lost,Lost
-401236038,2020,2,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-41.0,-44.0,West Virginia,West Virginia,-46.0,2020-09-12 16:00:00+00:00,Won,Won
-401236053,2020,2,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-14.5,-14.5,Kansas State,Kansas State,4.0,2020-09-12 16:00:00+00:00,Lost,Lost
-401240296,2020,2,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-21.5,Baylor,Baylor,,2020-09-12 16:00:00+00:00,,
-401240113,2020,2,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-24.5,-16.5,Louisiana Monroe,Army,-30.0,2020-09-12 17:30:00+00:00,Lost,Won
-401234574,2020,2,regular,Notre Dame,FBS Independents,Duke,ACC,-21.5,-21.0,Duke,Notre Dame,-14.0,2020-09-12 18:30:00+00:00,Won,Won
-401207113,2020,2,regular,Texas State,Sun Belt,UT San Antonio,Conference USA,-6.0,-4.5,UT San Antonio,Texas State,3.0,2020-09-12 19:30:00+00:00,Won,Lost
-401234563,2020,2,regular,Florida State,ACC,Georgia Tech,ACC,-13.5,-13.5,Florida State,Florida State,3.0,2020-09-12 20:00:00+00:00,Lost,Lost
-401240233,2020,2,regular,Pittsburgh,ACC,Austin Peay,MISSING,-30.5,-30.0,Austin Peay,Pittsburgh,-55.0,2020-09-12 20:00:00+00:00,Lost,Won
-401215298,2020,2,regular,Georgia Southern,Sun Belt,Campbell,MISSING,-27.5,-26.5,Campbell,Georgia Southern,-1.0,2020-09-12 20:14:00+00:00,Won,Won
-401236054,2020,2,regular,Oklahoma,Big 12,Missouri State,MISSING,-48.0,-49.5,Oklahoma,Oklahoma,-48.0,2020-09-12 23:00:00+00:00,Push,Won
-401240039,2020,2,regular,South Florida,American Athletic,The Citadel,MISSING,-17.5,-17.0,The Citadel,South Florida,-21.0,2020-09-12 23:00:00+00:00,Lost,Won
-401234562,2020,2,regular,Wake Forest,ACC,Clemson,ACC,36.0,40.0,Clemson,Clemson,24.0,2020-09-12 23:30:00+00:00,Lost,Won
-401239973,2020,2,regular,South Alabama,Sun Belt,Tulane,American Athletic,10.5,9.5,South Alabama,Tulane,3.0,2020-09-12 23:30:00+00:00,Won,Won
-401236222,2020,2,regular,Texas,Big 12,UTEP,Conference USA,-44.0,-41.0,UTEP,Texas,-56.0,2020-09-13 00:00:00+00:00,Lost,Won
-401236039,2020,2,regular,Texas Tech,Big 12,Houston Baptist,MISSING,-40.0,-39.5,Houston Baptist,Texas Tech,-2.0,2020-09-13 00:00:00+00:00,Won,Won
-401234564,2020,2,regular,Louisville,ACC,Western Kentucky,Conference USA,-13.5,-16.0,Louisville,Louisville,-14.0,2020-09-13 00:00:00+00:00,Won,Won
-401236658,2020,2,regular,Kansas,Big 12,Coastal Carolina,Sun Belt,-6.5,-8.0,Kansas,Kansas,15.0,2020-09-13 02:00:00+00:00,Lost,Lost
-401236041,2020,2,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-22.0,-24.0,Oklahoma State,Oklahoma State,,2020-09-19 16:00:00+00:00,,
+401234559,2020,2,regular,Miami,ACC,UAB,Conference USA,-15.5,-18.5,Miami,Miami,-17.0,2020-09-11 00:00:00+00:00,Won,Won
+401236081,2020,2,regular,Appalachian State,Sun Belt,Charlotte,Conference USA,-16.5,-11.5,Charlotte,Appalachian State,-15.0,2020-09-12 16:00:00+00:00,Won,Won
+401236038,2020,2,regular,West Virginia,Big 12,Eastern Kentucky,MISSING,-41.0,-32.0,Eastern Kentucky,West Virginia,-46.0,2020-09-12 16:00:00+00:00,Lost,Won
+401236053,2020,2,regular,Kansas State,Big 12,Arkansas State,Sun Belt,-14.5,-8.0,Arkansas State,Kansas State,4.0,2020-09-12 16:00:00+00:00,Won,Lost
+401234565,2020,2,regular,North Carolina,ACC,Syracuse,ACC,-24.0,-7.5,Syracuse,North Carolina,-25.0,2020-09-12 16:00:00+00:00,Lost,Won
+401236221,2020,2,regular,Iowa State,Big 12,Louisiana,Sun Belt,-13.5,-11.0,Louisiana,Iowa State,17.0,2020-09-12 16:00:00+00:00,Won,Lost
+401240296,2020,2,regular,Baylor,Big 12,Louisiana Tech,Conference USA,-18.5,-8.0,Louisiana Tech,Baylor,,2020-09-12 16:00:00+00:00,,
+401240113,2020,2,regular,Army,FBS Independents,Louisiana Monroe,Sun Belt,-24.5,-13.0,Louisiana Monroe,Army,-30.0,2020-09-12 17:30:00+00:00,Lost,Won
+401234574,2020,2,regular,Notre Dame,FBS Independents,Duke,ACC,-21.5,-12.0,Duke,Notre Dame,-14.0,2020-09-12 18:30:00+00:00,Won,Won
+401207113,2020,2,regular,Texas State,Sun Belt,UT San Antonio,Conference USA,-6.0,5.5,UT San Antonio,UT San Antonio,3.0,2020-09-12 19:30:00+00:00,Won,Won
+401240233,2020,2,regular,Pittsburgh,ACC,Austin Peay,MISSING,-30.5,-37.5,Pittsburgh,Pittsburgh,-55.0,2020-09-12 20:00:00+00:00,Won,Won
+401234563,2020,2,regular,Florida State,ACC,Georgia Tech,ACC,-12.5,-9.0,Georgia Tech,Florida State,3.0,2020-09-12 20:00:00+00:00,Won,Lost
+401215298,2020,2,regular,Georgia Southern,Sun Belt,Campbell,MISSING,-27.5,-36.0,Georgia Southern,Georgia Southern,-1.0,2020-09-12 20:14:00+00:00,Lost,Won
+401236054,2020,2,regular,Oklahoma,Big 12,Missouri State,MISSING,-50.5,-49.5,Missouri State,Oklahoma,-48.0,2020-09-12 23:00:00+00:00,Won,Won
+401240039,2020,2,regular,South Florida,American Athletic,The Citadel,MISSING,-17.5,-25.0,South Florida,South Florida,-21.0,2020-09-12 23:00:00+00:00,Won,Won
+401234562,2020,2,regular,Wake Forest,ACC,Clemson,ACC,34.5,15.5,Wake Forest,Clemson,24.0,2020-09-12 23:30:00+00:00,Won,Won
+401239973,2020,2,regular,South Alabama,Sun Belt,Tulane,American Athletic,11.5,5.5,South Alabama,Tulane,3.0,2020-09-12 23:30:00+00:00,Won,Won
+401236039,2020,2,regular,Texas Tech,Big 12,Houston Baptist,MISSING,-40.0,-31.5,Houston Baptist,Texas Tech,-2.0,2020-09-13 00:00:00+00:00,Won,Won
+401234564,2020,2,regular,Louisville,ACC,Western Kentucky,Conference USA,-13.0,-4.0,Western Kentucky,Louisville,-14.0,2020-09-13 00:00:00+00:00,Lost,Won
+401236222,2020,2,regular,Texas,Big 12,UTEP,Conference USA,-45.0,-25.0,UTEP,Texas,-56.0,2020-09-13 00:00:00+00:00,Lost,Won
+401236658,2020,2,regular,Kansas,Big 12,Coastal Carolina,Sun Belt,-6.0,-7.5,Kansas,Kansas,15.0,2020-09-13 02:00:00+00:00,Lost,Lost
+401236041,2020,2,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-22.0,-13.5,Tulsa,Oklahoma State,,2020-09-19 16:00:00+00:00,,
