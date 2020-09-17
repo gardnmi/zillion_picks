@@ -1,0 +1,41 @@
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,actual_spread,start_date,spread_result,regression_spread_result,classification_spread_result
+401135260,2019,16,postseason,Charlotte,Conference USA,Buffalo,Mid-American,7.0,5.5,1,0,0.5160129,22.0,2019-12-20 19:00:00+00:00,0,Lost,Won
+401135261,2019,16,postseason,Kent State,Mid-American,Utah State,Mountain West,7.0,-10.0,1,0,0.5586995,-10.0,2019-12-21 00:30:00+00:00,1,Won,Lost
+401135263,2019,16,postseason,San Diego State,Mountain West,Central Michigan,Mid-American,-3.5,-0.0,0,0,0.5360526,-37.0,2019-12-21 19:00:00+00:00,1,Lost,Lost
+401147693,2019,16,postseason,Georgia Southern,Sun Belt,Liberty,FBS Independents,-5.0,-8.0,1,1,0.31805354,7.0,2019-12-21 19:30:00+00:00,0,Lost,Lost
+401135264,2019,16,postseason,Florida Atlantic,Conference USA,SMU,American Athletic,7.0,-1.0,1,1,0.41554052,-24.0,2019-12-21 20:30:00+00:00,1,Won,Won
+401135265,2019,16,postseason,Arkansas State,Sun Belt,Florida International,Conference USA,1.0,-4.5,1,1,0.3155964,-8.0,2019-12-21 22:30:00+00:00,1,Won,Won
+401135266,2019,16,postseason,Washington,Pac-12,Boise State,Mountain West,-3.5,-5.5,1,1,0.4839322,-31.0,2019-12-22 00:30:00+00:00,1,Won,Won
+401135267,2019,16,postseason,UAB,Conference USA,Appalachian State,Sun Belt,17.0,-0.5,1,1,0.3676808,14.0,2019-12-22 02:00:00+00:00,1,Won,Won
+401135268,2019,16,postseason,Marshall,Conference USA,UCF,American Athletic,15.5,7.5,1,1,0.4163496,23.0,2019-12-23 19:30:00+00:00,0,Lost,Lost
+401135269,2019,16,postseason,BYU,FBS Independents,Hawai'i,Mountain West,-2.5,-5.5,1,0,0.5230114,4.0,2019-12-25 01:00:00+00:00,0,Lost,Won
+401135270,2019,16,postseason,Miami,ACC,Louisiana Tech,Conference USA,-6.5,-10.5,1,1,0.459953,14.0,2019-12-26 21:00:00+00:00,0,Lost,Lost
+401135271,2019,16,postseason,Eastern Michigan,Mid-American,Pittsburgh,ACC,12.0,11.0,1,0,0.7213409,4.0,2019-12-27 01:00:00+00:00,1,Won,Lost
+401135272,2019,16,postseason,Temple,American Athletic,North Carolina,ACC,6.0,13.0,0,0,0.618013,42.0,2019-12-27 17:00:00+00:00,0,Won,Won
+401135273,2019,16,postseason,Wake Forest,ACC,Michigan State,Big Ten,3.5,-4.0,1,0,0.5953896,6.0,2019-12-27 20:20:00+00:00,0,Lost,Won
+401135274,2019,16,postseason,Texas A&M,SEC,Oklahoma State,Big 12,-4.5,-13.5,1,0,0.54104465,-3.0,2019-12-27 23:45:00+00:00,0,Lost,Won
+401136253,2019,16,postseason,Iowa,Big Ten,USC,Pac-12,-1.5,8.5,0,1,0.36880684,-25.0,2019-12-28 01:00:00+00:00,1,Lost,Won
+401135275,2019,16,postseason,Washington State,Pac-12,Air Force,Mountain West,2.5,-8.5,1,1,0.23821962,10.0,2019-12-28 03:15:00+00:00,0,Lost,Lost
+401135277,2019,16,postseason,Penn State,Big Ten,Memphis,American Athletic,-6.5,-6.5,1,0,0.54192615,-14.0,2019-12-28 17:00:00+00:00,1,Won,Lost
+401135276,2019,16,postseason,Iowa State,Big 12,Notre Dame,FBS Independents,3.5,5.0,0,1,0.37435222,24.0,2019-12-28 17:00:00+00:00,0,Won,Lost
+401135278,2019,16,postseason,LSU,SEC,Oklahoma,Big 12,-12.5,-7.5,0,1,0.47162992,-35.0,2019-12-28 21:20:00+00:00,1,Lost,Won
+401135279,2019,16,postseason,Ohio State,Big Ten,Clemson,ACC,2.5,-6.5,1,1,0.28310424,6.0,2019-12-29 01:20:00+00:00,0,Lost,Lost
+401135280,2019,16,postseason,Western Michigan,Mid-American,Western Kentucky,Conference USA,3.0,3.5,0,0,0.7175733,3.0,2019-12-30 17:30:00+00:00,1,Push,Push
+401136254,2019,16,postseason,Illinois,Big Ten,California,Pac-12,6.0,6.5,0,0,0.5921665,15.0,2019-12-30 21:00:00+00:00,0,Won,Won
+401135281,2019,16,postseason,Louisville,ACC,Mississippi State,SEC,4.5,10.5,0,0,0.5605475,-10.0,2019-12-30 21:00:00+00:00,1,Lost,Lost
+401135282,2019,16,postseason,Virginia,ACC,Florida,SEC,15.5,2.0,1,1,0.3816203,8.0,2019-12-31 01:00:00+00:00,1,Won,Won
+401135283,2019,16,postseason,Kentucky,SEC,Virginia Tech,ACC,2.5,0.0,1,1,0.2948683,-7.0,2019-12-31 17:00:00+00:00,1,Won,Won
+401136255,2019,16,postseason,Arizona State,Pac-12,Florida State,ACC,-3.0,3.5,0,0,0.57372487,-6.0,2019-12-31 19:00:00+00:00,1,Lost,Lost
+401135284,2019,16,postseason,Kansas State,Big 12,Navy,American Athletic,2.0,-7.0,1,1,0.27273315,3.0,2019-12-31 20:45:00+00:00,0,Lost,Lost
+401147695,2019,16,postseason,Georgia State,Sun Belt,Wyoming,Mountain West,7.5,-3.5,1,1,0.439089,21.0,2019-12-31 21:30:00+00:00,0,Lost,Lost
+401135285,2019,16,postseason,Texas,Big 12,Utah,Pac-12,7.0,-8.0,1,1,0.43102932,-28.0,2020-01-01 00:30:00+00:00,1,Won,Won
+401135286,2019,16,postseason,Alabama,SEC,Michigan,Big Ten,-7.5,-8.0,1,1,0.38994157,-19.0,2020-01-01 18:00:00+00:00,1,Won,Won
+401135287,2019,16,postseason,Auburn,SEC,Minnesota,Big Ten,-7.0,-7.0,1,1,0.29486495,7.0,2020-01-01 18:00:00+00:00,0,Lost,Lost
+401135288,2019,16,postseason,Wisconsin,Big Ten,Oregon,Pac-12,-3.0,-1.5,0,0,0.58726305,1.0,2020-01-01 22:10:00+00:00,0,Won,Won
+401135289,2019,16,postseason,Baylor,Big 12,Georgia,SEC,3.5,11.0,0,0,0.6977259,12.0,2020-01-02 01:45:00+00:00,0,Won,Won
+401135290,2019,16,postseason,Cincinnati,American Athletic,Boston College,ACC,-7.5,-5.5,0,0,0.7175623,-32.0,2020-01-02 20:00:00+00:00,1,Lost,Lost
+401135291,2019,16,postseason,Tennessee,SEC,Indiana,Big Ten,-3.5,-6.5,1,1,0.284813,-1.0,2020-01-03 00:00:00+00:00,0,Lost,Lost
+401135292,2019,16,postseason,Nevada,Mountain West,Ohio,Mid-American,10.0,3.5,1,1,0.29374743,9.0,2020-01-03 20:30:00+00:00,1,Won,Won
+401135293,2019,16,postseason,Tulane,American Athletic,Southern Mississippi,Conference USA,-7.0,-5.5,0,0,0.541587,-17.0,2020-01-04 16:30:00+00:00,1,Lost,Lost
+401135294,2019,16,postseason,Miami (OH),Mid-American,Louisiana,Sun Belt,15.0,2.5,1,1,0.28330356,10.0,2020-01-07 00:30:00+00:00,1,Won,Won
+401135295,2019,16,postseason,LSU,SEC,Clemson,ACC,-4.5,-7.0,1,1,0.32218796,-17.0,2020-01-14 01:00:00+00:00,1,Won,Won

@@ -1,6 +1,10 @@
-game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,spread_pick,straight_pick,actual_spread,start_date,spread_result,straight_result
-401238035,2020,1,regular,UAB,Conference USA,Central Arkansas,MISSING,-21.0,-29.0,UAB,UAB,-10.0,2020-09-04 00:00:00+00:00,Lost,Won
-401207101,2020,1,regular,Southern Mississippi,Conference USA,South Alabama,Sun Belt,-12.5,-2.5,South Alabama,Southern Mississippi,11.0,2020-09-04 01:00:00+00:00,Won,Lost
-401235700,2020,1,regular,Army,FBS Independents,Middle Tennessee,Conference USA,-4.0,-16.5,Army,Army,-42.0,2020-09-05 17:30:00+00:00,Won,Won
-401212484,2020,1,regular,Texas State,Sun Belt,SMU,American Athletic,23.0,29.5,SMU,SMU,7.0,2020-09-05 20:30:00+00:00,Lost,Won
-401234576,2020,1,regular,Navy,American Athletic,BYU,FBS Independents,1.0,-8.0,Navy,Navy,52.0,2020-09-08 00:00:00+00:00,Lost,Lost
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,actual_spread,start_date,spread_result,regression_spread_result,classification_spread_result
+401238035,2020,1,regular,UAB,Conference USA,Central Arkansas,MISSING,-21.0,-19.0,0,0,0.66217065,-10.0,2020-09-04 00:00:00+00:00,0,Won,Won
+401207101,2020,1,regular,Southern Mississippi,Conference USA,South Alabama,Sun Belt,-12.5,-12.0,0,0,0.53534853,11.0,2020-09-04 01:00:00+00:00,0,Won,Won
+401237353,2020,1,regular,Marshall,Conference USA,Eastern Kentucky,MISSING,-25.5,-19.5,0,1,0.47787488,-59.0,2020-09-05 17:00:00+00:00,1,Lost,Won
+401235700,2020,1,regular,Army,FBS Independents,Middle Tennessee,Conference USA,-3.5,-12.0,1,1,0.44142717,-42.0,2020-09-05 17:30:00+00:00,1,Won,Won
+401212484,2020,1,regular,Texas State,Sun Belt,SMU,American Athletic,24.5,0.5,1,0,0.52118534,7.0,2020-09-05 20:30:00+00:00,1,Won,Lost
+401207098,2020,1,regular,North Texas,Conference USA,Houston Baptist,MISSING,-23.0,-25.0,1,0,0.60799766,-26.0,2020-09-05 23:30:00+00:00,1,Won,Lost
+401212553,2020,1,regular,Memphis,American Athletic,Arkansas State,Sun Belt,-18.5,-5.0,0,1,0.4842273,-13.0,2020-09-06 00:00:00+00:00,0,Won,Lost
+401239884,2020,1,regular,UTEP,Conference USA,Stephen F. Austin,MISSING,-4.0,-19.0,1,1,0.49858564,-10.0,2020-09-06 01:00:00+00:00,1,Won,Won
+401234576,2020,1,regular,Navy,American Athletic,BYU,FBS Independents,1.0,0.5,1,1,0.36323732,52.0,2020-09-08 00:00:00+00:00,0,Lost,Lost

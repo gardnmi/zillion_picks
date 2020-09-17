@@ -52,7 +52,7 @@ def picks(is_premium=None, flash_message=None):
             if purchase:
                 df = pd.read_csv(
                     picks_file_path/f'premium/{season}_{week}.csv')
-                spread_results, straight_results, std_spread_results, std_straight_results = get_results(
+                regression_results, classification_results, std_regression_results, std_classification_results = get_results(
                     df, picks_file_path, season, week)
 
                 return render_template(
@@ -61,10 +61,10 @@ def picks(is_premium=None, flash_message=None):
                     sidebar_links=sidebar_links,
                     season=season,
                     week=week,
-                    spread_results=spread_results,
-                    straight_results=straight_results,
-                    std_spread_results=std_spread_results,
-                    std_straight_results=std_straight_results,
+                    regression_results=regression_results,
+                    classification_results=classification_results,
+                    std_regression_results=std_regression_results,
+                    std_classification_results=std_classification_results,
                     active=season)
             else:
                 stripe_session = stripe.checkout.Session.create(
@@ -93,7 +93,7 @@ def picks(is_premium=None, flash_message=None):
     else:
 
         df = pd.read_csv(picks_file_path/f'free/{season}_{week}.csv')
-        spread_results, straight_results, std_spread_results, std_straight_results = get_results(
+        regression_results, classification_results, std_regression_results, std_classification_results = get_results(
             df, picks_file_path, season, week)
 
         return render_template("picks.html",
@@ -101,10 +101,10 @@ def picks(is_premium=None, flash_message=None):
                                sidebar_links=sidebar_links,
                                season=season,
                                week=week,
-                               spread_results=spread_results,
-                               straight_results=straight_results,
-                               std_spread_results=std_spread_results,
-                               std_straight_results=std_straight_results,
+                               regression_results=regression_results,
+                               classification_results=classification_results,
+                               std_regression_results=std_regression_results,
+                               std_classification_results=std_classification_results,
                                active=season
                                )
 

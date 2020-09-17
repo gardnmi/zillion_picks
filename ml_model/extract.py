@@ -35,6 +35,12 @@ def games_extract(seasons, filepath):
     for season in seasons:
         df = pd.read_json(
             f'https://api.collegefootballdata.com/games?year={season}&seasonType=both')
+
+        # Update postseason week to be max week plus 1 for modeling reasons
+        df['week'] = np.where(df['season_type'] ==
+                              'postseason', df['week'].max() + 1, df['week'])
+        df = df.sort_values(by='start_date')
+
         df.to_csv(filepath/f'seasons/{season}/games.csv', index=False)
 
 

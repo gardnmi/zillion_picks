@@ -10,7 +10,7 @@
 <!-- End of Topbar -->
 <!-- Begin Page Content -->
 <div class="container-fluid">
-	{% if spread_results|length > 0 %}
+	{% if regression_results|length > 0 %}
 	<div class="row">
 		<div class="col-xl-3 col-md-6 mb-4">
 			<div class="card border-left-primary shadow h-100 py-2">
@@ -18,7 +18,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								THIS WEEKS SPREAD RESULT
+								THIS REGRESSION MODEL SPREAD RESULT
 								<small>
 									<br />
 									WIN / LOSS / PUSH
@@ -26,10 +26,10 @@
 							</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								<small
-									><span class="text-success">{{ '%0.1f'| format(spread_results.get('Won', 0) * 100) }}% </span>
+									><span class="text-success">{{ '%0.1f'| format(regression_results.get('Won', 0) * 100) }}% </span>
 									/
-									<span class="text-danger">{{ '%0.1f'| format(spread_results.get('Lost', 0) * 100)}}%</span>
-									/ {{ '%0.1f'| format(spread_results.get('Push', 0)*100) }}%</small
+									<span class="text-danger">{{ '%0.1f'| format(regression_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(regression_results.get('Push', 0)*100) }}%</small
 								>
 							</div>
 						</div>
@@ -46,34 +46,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								THIS WEEKS STRAIGHT UP RESULT
-								<small>
-									<br />
-									WIN / LOSS
-								</small>
-							</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800">
-								<small
-									><span class="text-success">{{ '%0.1f'| format(straight_results.get('Won', 0) * 100) }}% </span>
-									/
-									<span class="text-danger">{{ '%0.1f'| format(straight_results.get('Lost', 0) * 100)}}%</span></small
-								>
-							</div>
-						</div>
-						<div class="col-auto">
-							<i class="fas fa-percent fa-2x text-gray-300"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xl-3 col-md-6 mb-4">
-			<div class="card border-left-primary shadow h-100 py-2">
-				<div class="card-body">
-					<div class="row no-gutters align-items-center">
-						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								SEASON TO DATE SPREAD RESULT
+								THIS WEEKS CLASSIFICATION MODEL RESULT
 								<small>
 									<br />
 									WIN / LOSS / PUSH
@@ -81,10 +54,10 @@
 							</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								<small
-									><span class="text-success">{{ '%0.1f'| format(std_spread_results.get('Won', 0) * 100) }}% </span>
+									><span class="text-success">{{ '%0.1f'| format(classification_results.get('Won', 0) * 100) }}% </span>
 									/
-									<span class="text-danger">{{ '%0.1f'| format(std_spread_results.get('Lost', 0) * 100)}}%</span>
-									/ {{ '%0.1f'| format(std_spread_results.get('Push', 0)*100) }}%</small
+									<span class="text-danger">{{ '%0.1f'| format(classification_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(classification_results.get('Push', 0)*100) }}%</small
 								>
 							</div>
 						</div>
@@ -101,7 +74,35 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								SEASON TO DATE STRAIGHT UP RESULT
+								SEASON TO DATE REGRESSION MODEL RESULT
+								<small>
+									<br />
+									WIN / LOSS / PUSH
+								</small>
+							</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">
+								<small
+									><span class="text-success">{{ '%0.1f'| format(std_regression_results.get('Won', 0) * 100) }}% </span>
+									/
+									<span class="text-danger">{{ '%0.1f'| format(std_regression_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(std_regression_results.get('Push', 0)*100) }}%</small
+								>
+							</div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-percent fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-primary shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-uppercase mb-1">
+								SEASON TO DATE CLASSIFICATION MODEL RESULT
 								<small>
 									<br />
 									WIN / LOSS
@@ -109,9 +110,10 @@
 							</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								<small
-									><span class="text-success">{{ '%0.1f'| format(std_straight_results.get('Won', 0) * 100) }}% </span>
+									><span class="text-success">{{ '%0.1f'| format(std_classification_results.get('Won', 0) * 100) }}% </span>
 									/
-									<span class="text-danger">{{ '%0.1f'| format(std_straight_results.get('Lost', 0) * 100)}}%</span></small
+									<span class="text-danger">{{ '%0.1f'| format(std_classification_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(std_classification_results.get('Push', 0)*100) }}%</small
 								>
 							</div>
 						</div>
@@ -131,7 +133,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								PRIOR SEASON SPREAD RESULT
+								PRIOR SEASON REGRESSION MODEL RESULT
 								<small>
 									<br />
 									WIN / LOSS / PUSH
@@ -139,10 +141,10 @@
 							</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								<small
-									><span class="text-success">{{ '%0.1f'| format(std_spread_results.get('Won', 0) * 100) }}% </span>
+									><span class="text-success">{{ '%0.1f'| format(std_regression_results.get('Won', 0) * 100) }}% </span>
 									/
-									<span class="text-danger">{{ '%0.1f'| format(std_spread_results.get('Lost', 0) * 100)}}%</span>
-									/ {{ '%0.1f'| format(std_spread_results.get('Push', 0)*100) }}%</small
+									<span class="text-danger">{{ '%0.1f'| format(std_regression_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(std_regression_results.get('Push', 0)*100) }}%</small
 								>
 							</div>
 						</div>
@@ -159,7 +161,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-uppercase mb-1">
-								PRIOR SEASON STRAIGHT UP RESULT
+								PRIOR SEASON CLASSIFICATION MODEL RESULT
 								<small>
 									<br />
 									WIN / LOSS
@@ -167,9 +169,10 @@
 							</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								<small
-									><span class="text-success">{{ '%0.1f'| format(std_straight_results.get('Won', 0) * 100) }}% </span>
+									><span class="text-success">{{ '%0.1f'| format(std_classification_results.get('Won', 0) * 100) }}% </span>
 									/
-									<span class="text-danger">{{ '%0.1f'| format(std_straight_results.get('Lost', 0) * 100)}}%</span></small
+									<span class="text-danger">{{ '%0.1f'| format(std_classification_results.get('Lost', 0) * 100)}}%</span>
+									/ {{ '%0.1f'| format(std_classification_results.get('Push', 0)*100) }}%</small
 								>
 							</div>
 						</div>

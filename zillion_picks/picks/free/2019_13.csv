@@ -1,0 +1,64 @@
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,actual_spread,start_date,spread_result,regression_spread_result,classification_spread_result
+401119305,2019,13,regular,Northern Illinois,Mid-American,Eastern Michigan,Mid-American,-3.5,-4.5,1,1,0.42626542,28.0,2019-11-20 00:30:00+00:00,0,Lost,Lost
+401119306,2019,13,regular,Bowling Green,Mid-American,Ohio,Mid-American,20.5,0.0,1,0,0.51342916,42.0,2019-11-20 00:30:00+00:00,0,Lost,Won
+401119308,2019,13,regular,Buffalo,Mid-American,Toledo,Mid-American,-10.0,-7.0,0,0,0.5719171,-19.0,2019-11-21 00:30:00+00:00,1,Lost,Lost
+401119307,2019,13,regular,Miami (OH),Mid-American,Akron,Mid-American,-28.0,-16.0,0,0,0.5564288,-3.0,2019-11-21 00:30:00+00:00,0,Won,Won
+401112513,2019,13,regular,Georgia Tech,ACC,NC State,ACC,2.5,9.0,0,0,0.63221097,-2.0,2019-11-22 01:00:00+00:00,1,Lost,Lost
+401117550,2019,13,regular,Wyoming,Mountain West,Colorado State,Mountain West,-4.5,-5.0,1,1,0.3078012,-10.0,2019-11-23 02:30:00+00:00,1,Won,Won
+401119309,2019,13,regular,Kent State,Mid-American,Ball State,Mid-American,3.0,-2.0,1,0,0.51422274,-3.0,2019-11-23 17:00:00+00:00,1,Won,Lost
+401112094,2019,13,regular,Iowa State,Big 12,Kansas,Big 12,-26.5,-14.5,0,1,0.44631785,-10.0,2019-11-23 17:00:00+00:00,0,Won,Lost
+401112520,2019,13,regular,Virginia,ACC,Liberty,FBS Independents,-16.5,-17.5,1,1,0.47652513,-28.0,2019-11-23 17:00:00+00:00,1,Won,Won
+401112236,2019,13,regular,Northwestern,Big Ten,Minnesota,Big Ten,16.0,8.0,1,0,0.6701584,16.0,2019-11-23 17:00:00+00:00,1,Push,Push
+401117906,2019,13,regular,Tulane,American Athletic,UCF,American Athletic,7.0,0.5,1,0,0.5179795,3.0,2019-11-23 17:00:00+00:00,1,Won,Lost
+401112256,2019,13,regular,Ohio State,Big Ten,Penn State,Big Ten,-20.0,-9.5,0,0,0.50112724,-11.0,2019-11-23 17:00:00+00:00,0,Won,Won
+401110856,2019,13,regular,Auburn,SEC,Samford,MISSING,-45.5,-47.5,1,0,0.5062976,-52.0,2019-11-23 17:00:00+00:00,1,Won,Lost
+401114358,2019,13,regular,UMass,FBS Independents,BYU,FBS Independents,41.5,24.0,1,0,0.61710835,32.0,2019-11-23 17:00:00+00:00,1,Won,Lost
+401117908,2019,13,regular,Connecticut,American Athletic,East Carolina,American Athletic,15.5,13.5,1,0,0.64357257,7.0,2019-11-23 17:00:00+00:00,1,Won,Lost
+401112155,2019,13,regular,Iowa,Big Ten,Illinois,Big Ten,-15.5,-7.5,0,1,0.4823504,-9.0,2019-11-23 17:00:00+00:00,0,Won,Lost
+401112220,2019,13,regular,Rutgers,Big Ten,Michigan State,Big Ten,21.5,9.5,1,1,0.47983146,27.0,2019-11-23 17:00:00+00:00,0,Lost,Lost
+401110855,2019,13,regular,Alabama,SEC,Western Carolina,MISSING,-58.5,-50.0,0,0,0.65700513,-63.0,2019-11-23 17:00:00+00:00,1,Lost,Lost
+401112128,2019,13,regular,West Virginia,Big 12,Oklahoma State,Big 12,6.5,14.0,0,0,0.65052974,7.0,2019-11-23 17:00:00+00:00,0,Won,Won
+401121976,2019,13,regular,Georgia State,Sun Belt,South Alabama,Sun Belt,-9.0,-6.0,0,0,0.565889,-13.0,2019-11-23 19:00:00+00:00,1,Lost,Lost
+401183793,2019,13,regular,New Mexico,Mountain West,Air Force,Mountain West,24.0,7.5,1,0,0.6135159,22.0,2019-11-23 19:00:00+00:00,1,Won,Lost
+401112514,2019,13,regular,Notre Dame,FBS Independents,Boston College,ACC,-20.5,-15.5,0,1,0.471776,-33.0,2019-11-23 19:30:00+00:00,1,Lost,Won
+401121973,2019,13,regular,Appalachian State,Sun Belt,Texas State,Sun Belt,-28.0,-21.0,0,1,0.42270952,-22.0,2019-11-23 19:30:00+00:00,0,Won,Lost
+401121974,2019,13,regular,Arkansas State,Sun Belt,Georgia Southern,Sun Belt,-1.5,-3.5,1,1,0.46565616,-5.0,2019-11-23 20:00:00+00:00,1,Won,Won
+401114315,2019,13,regular,UAB,Conference USA,Louisiana Tech,Conference USA,-6.5,-1.0,0,0,0.5321568,-6.0,2019-11-23 20:30:00+00:00,0,Won,Won
+401112167,2019,13,regular,Indiana,Big Ten,Michigan,Big Ten,9.5,8.0,1,0,0.6325667,25.0,2019-11-23 20:30:00+00:00,0,Lost,Won
+401112083,2019,13,regular,Baylor,Big 12,Texas,Big 12,-4.0,9.5,0,0,0.7335923,-14.0,2019-11-23 20:30:00+00:00,1,Lost,Lost
+401110857,2019,13,regular,Georgia,SEC,Texas A&M,SEC,-12.0,-4.0,0,0,0.5545974,-6.0,2019-11-23 20:30:00+00:00,0,Won,Won
+401112519,2019,13,regular,Virginia Tech,ACC,Pittsburgh,ACC,-3.5,-5.5,1,1,0.4866861,-28.0,2019-11-23 20:30:00+00:00,1,Won,Won
+401114317,2019,13,regular,Rice,Conference USA,North Texas,Conference USA,6.5,4.0,1,0,0.7553746,-6.0,2019-11-23 20:30:00+00:00,1,Won,Lost
+401112210,2019,13,regular,Maryland,Big Ten,Nebraska,Big Ten,6.5,8.5,0,0,0.51430565,47.0,2019-11-23 20:30:00+00:00,0,Won,Won
+401110858,2019,13,regular,Kentucky,SEC,UT Martin,MISSING,-30.5,-35.0,1,1,0.35025173,-43.0,2019-11-23 20:30:00+00:00,1,Won,Won
+401114217,2019,13,regular,USC,Pac-12,UCLA,Pac-12,-13.5,-2.0,0,1,0.4703738,-17.0,2019-11-23 20:30:00+00:00,1,Lost,Won
+401114318,2019,13,regular,Southern Mississippi,Conference USA,Western Kentucky,Conference USA,-3.5,-1.5,0,0,0.6574439,18.0,2019-11-23 20:30:00+00:00,0,Won,Won
+401114313,2019,13,regular,Charlotte,Conference USA,Marshall,Conference USA,6.5,3.5,1,0,0.51568216,-11.0,2019-11-23 20:30:00+00:00,1,Won,Lost
+401110862,2019,13,regular,Vanderbilt,SEC,East Tennessee State,MISSING,-20.5,-31.5,1,0,0.5442523,-38.0,2019-11-23 20:30:00+00:00,1,Won,Lost
+401117911,2019,13,regular,Navy,American Athletic,SMU,American Athletic,-3.5,2.5,0,0,0.63723695,-7.0,2019-11-23 20:30:00+00:00,1,Lost,Lost
+401117553,2019,13,regular,UNLV,Mountain West,San José State,Mountain West,7.0,2.0,1,1,0.4854586,-3.0,2019-11-23 21:00:00+00:00,1,Won,Won
+401114319,2019,13,regular,New Mexico State,FBS Independents,UTEP,Conference USA,-7.0,1.5,0,0,0.69600487,-9.0,2019-11-23 21:00:00+00:00,1,Lost,Lost
+401117909,2019,13,regular,South Florida,American Athletic,Memphis,American Athletic,14.5,9.5,1,1,0.3662269,39.0,2019-11-23 21:00:00+00:00,0,Lost,Lost
+401114182,2019,13,regular,Stanford,Pac-12,California,Pac-12,-1.0,-8.5,1,1,0.32182765,4.0,2019-11-23 21:00:00+00:00,0,Lost,Lost
+401112263,2019,13,regular,Wisconsin,Big Ten,Purdue,Big Ten,-24.5,-18.5,0,1,0.4657055,-21.0,2019-11-23 21:00:00+00:00,0,Won,Lost
+401112516,2019,13,regular,Louisville,ACC,Syracuse,ACC,-7.5,1.5,0,0,0.51972747,-22.0,2019-11-23 21:00:00+00:00,1,Lost,Lost
+401114316,2019,13,regular,Middle Tennessee,Conference USA,Old Dominion,Conference USA,-13.5,-11.0,0,0,0.50457764,-21.0,2019-11-23 21:30:00+00:00,1,Lost,Lost
+401121975,2019,13,regular,Louisiana Monroe,Sun Belt,Coastal Carolina,Sun Belt,-6.0,4.5,0,0,0.5405392,-3.0,2019-11-23 22:00:00+00:00,0,Won,Won
+401121977,2019,13,regular,Louisiana,Sun Belt,Troy,Sun Belt,-12.5,-8.5,0,1,0.41458213,-50.0,2019-11-23 22:00:00+00:00,1,Lost,Won
+401114314,2019,13,regular,UT San Antonio,Conference USA,Florida Atlantic,Conference USA,21.5,19.0,1,0,0.5331422,14.0,2019-11-23 23:00:00+00:00,1,Won,Lost
+401112517,2019,13,regular,Florida International,Conference USA,Miami,ACC,21.0,-2.5,1,1,0.42363745,-6.0,2019-11-24 00:00:00+00:00,1,Won,Won
+401112113,2019,13,regular,Texas Tech,Big 12,Kansas State,Big 12,-1.0,-1.5,1,1,0.38008058,3.0,2019-11-24 00:00:00+00:00,0,Lost,Lost
+401110859,2019,13,regular,LSU,SEC,Arkansas,SEC,-41.5,-26.5,0,0,0.596329,-36.0,2019-11-24 00:00:00+00:00,0,Won,Won
+401117907,2019,13,regular,Cincinnati,American Athletic,Temple,American Athletic,-9.0,-8.0,0,0,0.52245474,-2.0,2019-11-24 00:00:00+00:00,0,Won,Won
+401114162,2019,13,regular,Arizona State,Pac-12,Oregon,Pac-12,13.5,8.5,1,0,0.5624847,-3.0,2019-11-24 00:30:00+00:00,1,Won,Lost
+401112515,2019,13,regular,Wake Forest,ACC,Duke,ACC,-6.5,2.0,0,0,0.5397361,-12.0,2019-11-24 00:30:00+00:00,1,Lost,Lost
+401110861,2019,13,regular,Missouri,SEC,Tennessee,SEC,-2.5,-8.0,1,0,0.5482587,4.0,2019-11-24 00:30:00+00:00,0,Lost,Won
+401110860,2019,13,regular,Mississippi State,SEC,Abilene Christian,MISSING,-37.0,-34.0,0,0,0.61893314,-38.0,2019-11-24 00:30:00+00:00,1,Lost,Lost
+401117910,2019,13,regular,Tulsa,American Athletic,Houston,American Athletic,-6.0,13.0,0,0,0.6269752,10.0,2019-11-24 00:30:00+00:00,0,Won,Won
+401112120,2019,13,regular,Oklahoma,Big 12,TCU,Big 12,-18.0,-21.0,1,1,0.40621,-4.0,2019-11-24 01:00:00+00:00,0,Lost,Lost
+401114206,2019,13,regular,Washington State,Pac-12,Oregon State,Pac-12,-10.5,1.0,0,1,0.43227112,-1.0,2019-11-24 02:00:00+00:00,0,Won,Lost
+401114173,2019,13,regular,Arizona,Pac-12,Utah,Pac-12,23.5,16.0,1,0,0.821524,28.0,2019-11-24 03:00:00+00:00,0,Lost,Won
+401114191,2019,13,regular,Colorado,Pac-12,Washington,Pac-12,14.0,11.0,1,1,0.42524964,-6.0,2019-11-24 03:00:00+00:00,1,Won,Won
+401117551,2019,13,regular,Fresno State,Mountain West,Nevada,Mountain West,-12.5,-4.5,0,0,0.7188295,7.0,2019-11-24 03:30:00+00:00,0,Won,Won
+401117549,2019,13,regular,Utah State,Mountain West,Boise State,Mountain West,4.0,11.5,0,0,0.67075324,35.0,2019-11-24 03:30:00+00:00,0,Won,Won
+401117552,2019,13,regular,Hawai'i,Mountain West,San Diego State,Mountain West,-1.0,7.0,0,0,0.7244065,-3.0,2019-11-24 04:00:00+00:00,1,Lost,Lost
