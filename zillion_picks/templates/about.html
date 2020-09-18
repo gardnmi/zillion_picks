@@ -16,8 +16,7 @@
 			<h2 id="how-we-do-it">How we do it:</h2>
 			<p>
 				Each day we scrape the web to get the most up to date data available. This information is then fed into our ensemble of machine learning models which in turn provides a non-biased prediction
-				for each and every game. The predicted outcome is captured in the
-				<strong>Predicted Outcome</strong> field in the Picks Tables.
+				for each and every game.
 			</p>
 			<h2 id="picks-table">Picks Table</h2>
 			<p>
@@ -33,35 +32,28 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Bookie Spread</td>
+						<td>Sportsbook Spread (Avg)</td>
 						<td>This is the average spread consensus from the most popular online sportsbooks. Negative number favors the home team and vice versa.</td>
 					</tr>
 					<tr>
-						<td>Zillion Picks Spread</td>
-						<td>This is our algorithm prediction for the result of the game. Negative number favors the home team and vice versa</td>
+						<td>Regression Model Pick</td>
+						<td>This is our regression algorithm prediction for the result of the game. Negative number favors the home team and vice versa</td>
 					</tr>
 					<tr>
-						<td>Spread Difference</td>
-						<td>The difference between the Vegas Spread and Predicted Outcome. A bigger difference could indicate a bad spread set by Vegas and a betting opportunity but this is not a guarantee.</td>
+						<td>Regression Model Spread</td>
+						<td>The regression algorithm predicts the final spread outcome to determine the pick.</td>
 					</tr>
 					<tr>
-						<td>Finale Game Result Spread</td>
-						<td>The actual result of the game. A negative score means the home team won and vice versa. i.e. -10 means the home team won by 10</td>
+						<td>Classification Model Pick</td>
+						<td>This is our classification algorithm pick. It is an alternative model to the regression algorithm</td>
 					</tr>
 					<tr>
-						<td>Spread Pick</td>
-						<td>
-							Our pick based on the difference between the Vegas Spread and Our Predicted Outcome. i.e. if Vegas Spread -7 and Predicted Outcome -9 we pick the home team or if Vegas Spread -7 and
-							Predicted Outcome -3 we pick the away team
-						</td>
+						<td>Classification Model Pick</td>
+						<td>The percent confidence of each pick from the classification algorithm. Regression algorithms do not provide confidence scores.</td>
 					</tr>
 					<tr>
-						<td>Straight Up Pick</td>
-						<td>Our pick based on the Predicted Outcome. i.e. if Predicted Outcome is -7 we pick the home team or if Predicted Outcome is 7 we pick the away team</td>
-					</tr>
-					<tr>
-						<td>Spread / Straight Up Result</td>
-						<td>This indicates if our pick won or lost.</td>
+						<td>Final Game Result</td>
+						<td>The actual outcome of the game</td>
 					</tr>
 				</tbody>
 			</table>
