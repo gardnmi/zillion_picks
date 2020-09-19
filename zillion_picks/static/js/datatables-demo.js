@@ -2,7 +2,7 @@
 $(document).ready(function () {
 	$("#dataTable").DataTable({
 		paging: false,
-		// dom: 'Bfrtip',
+		dom: "Bfrtip",
 		// scrollY: '600',
 		// scrollX: true,
 		buttons: ["copy", "csv", "excel"],
