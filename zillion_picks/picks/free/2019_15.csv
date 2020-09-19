@@ -1,12 +1,12 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,actual_spread,start_date,spread_result,regression_spread_result,classification_spread_result
-401132973,2019,15,regular,Oregon,Pac-12,Utah,Pac-12,6.5,-8.5,1,1,0.4094519,-22.0,2019-12-07 01:00:00+00:00,1,Won,Won
-401132984,2019,15,regular,Appalachian State,Sun Belt,Louisiana,Sun Belt,-5.0,-4.5,0,1,0.40997106,-7.0,2019-12-07 17:00:00+00:00,1,Lost,Won
-401132974,2019,15,regular,Oklahoma,Big 12,Baylor,Big 12,-9.5,-18.5,1,1,0.22949159,-7.0,2019-12-07 17:00:00+00:00,0,Lost,Lost
-401132982,2019,15,regular,Central Michigan,Mid-American,Miami (OH),Mid-American,-6.5,-16.0,1,1,0.2512585,5.0,2019-12-07 17:00:00+00:00,0,Lost,Lost
-401132980,2019,15,regular,Florida Atlantic,Conference USA,UAB,Conference USA,-8.0,-5.0,0,0,0.5689709,-43.0,2019-12-07 18:30:00+00:00,1,Lost,Lost
-401132976,2019,15,regular,Memphis,American Athletic,Cincinnati,American Athletic,-9.0,3.0,0,0,0.6426004,-5.0,2019-12-07 20:30:00+00:00,0,Won,Won
-401132979,2019,15,regular,Boise State,Mountain West,Hawai'i,Mountain West,-14.0,-7.0,0,0,0.50713116,-21.0,2019-12-07 21:00:00+00:00,1,Lost,Lost
-401132981,2019,15,regular,LSU,SEC,Georgia,SEC,-7.0,-6.0,0,0,0.5022444,-27.0,2019-12-07 21:00:00+00:00,1,Lost,Lost
-401132975,2019,15,regular,Clemson,ACC,Virginia,ACC,-29.0,-27.0,0,0,0.5763837,-45.0,2019-12-08 00:30:00+00:00,1,Lost,Lost
-401132983,2019,15,regular,Wisconsin,Big Ten,Ohio State,Big Ten,16.5,4.0,1,1,0.2715029,13.0,2019-12-08 01:00:00+00:00,1,Won,Won
-401114335,2019,15,regular,Navy,American Athletic,Army,FBS Independents,-11.5,-11.0,0,0,0.65545905,-24.0,2019-12-14 20:00:00+00:00,1,Lost,Lost
+401132973,2019,15,regular,Oregon,Pac-12,Utah,Pac-12,6.5,-8.5,1,1,0.36428946,-22.0,2019-12-07 01:00:00+00:00,1,Won,Won
+401132984,2019,15,regular,Appalachian State,Sun Belt,Louisiana,Sun Belt,-5.0,-4.5,0,1,0.427853,-7.0,2019-12-07 17:00:00+00:00,1,Lost,Won
+401132974,2019,15,regular,Oklahoma,Big 12,Baylor,Big 12,-9.5,-18.5,1,1,0.2923612,-7.0,2019-12-07 17:00:00+00:00,0,Lost,Lost
+401132982,2019,15,regular,Central Michigan,Mid-American,Miami (OH),Mid-American,-6.5,-16.0,1,1,0.23205471,5.0,2019-12-07 17:00:00+00:00,0,Lost,Lost
+401132980,2019,15,regular,Florida Atlantic,Conference USA,UAB,Conference USA,-8.0,-5.0,0,1,0.49049425,-43.0,2019-12-07 18:30:00+00:00,1,Lost,Won
+401132976,2019,15,regular,Memphis,American Athletic,Cincinnati,American Athletic,-9.0,3.0,0,0,0.66144204,-5.0,2019-12-07 20:30:00+00:00,0,Won,Won
+401132979,2019,15,regular,Boise State,Mountain West,Hawai'i,Mountain West,-14.0,-7.0,0,1,0.45027232,-21.0,2019-12-07 21:00:00+00:00,1,Lost,Won
+401132981,2019,15,regular,LSU,SEC,Georgia,SEC,-7.0,-6.0,0,1,0.3748418,-27.0,2019-12-07 21:00:00+00:00,1,Lost,Won
+401132975,2019,15,regular,Clemson,ACC,Virginia,ACC,-29.0,-27.0,0,0,0.6289797,-45.0,2019-12-08 00:30:00+00:00,1,Lost,Lost
+401132983,2019,15,regular,Wisconsin,Big Ten,Ohio State,Big Ten,16.5,4.0,1,1,0.274216,13.0,2019-12-08 01:00:00+00:00,1,Won,Won
+401114335,2019,15,regular,Navy,American Athletic,Army,FBS Independents,-11.5,-11.0,0,1,0.41211706,-24.0,2019-12-14 20:00:00+00:00,1,Lost,Won

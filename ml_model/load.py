@@ -179,3 +179,14 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
     # df['weatherDesc'] = df.weatherDesc.fillna('Sunny')
 
     return df
+
+
+model_classifier = XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+                                 colsample_bynode=1, colsample_bytree=0.8, gamma=5, gpu_id=-1,
+                                 importance_type='gain', interaction_constraints='',
+                                 learning_rate=0.1, max_delta_step=0, max_depth=5,
+                                 min_child_weight=10, monotone_constraints='()',
+                                 n_estimators=100, n_jobs=0, num_parallel_tree=1,
+                                 objective='binary:logistic', random_state=0, reg_alpha=0,
+                                 reg_lambda=1, scale_pos_weight=1, subsample=1.0,
+                                 tree_method='exact', validate_parameters=1, verbosity=None)
