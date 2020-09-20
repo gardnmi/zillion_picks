@@ -79,6 +79,10 @@ def games_stat_extract(seasons, teams, filepath):
 
                         df = pd.concat(stat_dfs, axis=1)
                         df['game_id'] = game_id
+
+                        # Fix Duplicate Column Issue
+                        df = df.loc[:, ~df.columns.duplicated()]
+
                         game_dfs.append(df)
 
                     df = pd.concat(game_dfs, axis=0, ignore_index=True)
