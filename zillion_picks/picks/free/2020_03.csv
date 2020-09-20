@@ -1,15 +1,18 @@
-game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,regression_spread_result,classification_spread_result,actual_spread,start_date_x,spread_result,actual_spread,start_date_y
-401212522,2020,3,regular,Tulane,American Athletic,Navy,American Athletic,-5.5,-11.5,1,1,0.33308530000000003,Lost,Lost,3.0,2020-09-19 16:00:00+00:00,0.0,3.0,2020-09-19 16:00:00+00:00
-401234567,2020,3,regular,Duke,ACC,Boston College,ACC,-3.5,2.5,0,1,0.46211857,Won,Lost,20.0,2020-09-19 16:00:00+00:00,0.0,20.0,2020-09-19 16:00:00+00:00
-401234571,2020,3,regular,Pittsburgh,ACC,Syracuse,ACC,-21.0,-16.5,0,1,0.4900282,Won,Lost,-11.0,2020-09-19 16:00:00+00:00,0.0,-11.0,2020-09-19 16:00:00+00:00
-401236041,2020,3,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-24.0,-5.0,0,1,0.31072903,Won,Lost,-9.0,2020-09-19 16:00:00+00:00,0.0,-9.0,2020-09-19 16:00:00+00:00
-401207124,2020,3,regular,Western Kentucky,Conference USA,Liberty,FBS Independents,-15.0,-4.5,0,0,0.6203664000000001,Won,Won,6.0,2020-09-19 16:00:00+00:00,0.0,6.0,2020-09-19 16:00:00+00:00
-401241282,2020,3,regular,Notre Dame,FBS Independents,South Florida,American Athletic,-22.0,-20.0,0,0,0.6958859000000001,Lost,Lost,-52.0,2020-09-19 18:30:00+00:00,1.0,-52.0,2020-09-19 18:30:00+00:00
-401234568,2020,3,regular,Georgia Tech,ACC,UCF,American Athletic,8.0,7.0,1,1,0.44769013,Lost,Lost,28.0,2020-09-19 19:30:00+00:00,0.0,28.0,2020-09-19 19:30:00+00:00
-401240640,2020,3,regular,Middle Tennessee,Conference USA,Troy,Sun Belt,2.5,-8.5,1,1,0.37985885,Lost,Lost,33.0,2020-09-19 19:30:00+00:00,0.0,33.0,2020-09-19 19:30:00+00:00
-401236939,2020,3,regular,Marshall,Conference USA,Appalachian State,Sun Belt,5.5,-3.5,1,1,0.40881515,Won,Won,-10.0,2020-09-19 19:30:00+00:00,1.0,-10.0,2020-09-19 19:30:00+00:00
-401207120,2020,3,regular,North Texas,Conference USA,SMU,American Athletic,14.5,-4.5,1,0,0.6724449,Lost,Won,30.0,2020-09-19 22:00:00+00:00,0.0,30.0,2020-09-19 22:00:00+00:00
-401215302,2020,3,regular,Louisiana Monroe,Sun Belt,Texas State,Sun Belt,3.5,-12.5,1,0,0.65413964,Lost,Won,21.0,2020-09-19 23:30:00+00:00,0.0,21.0,2020-09-19 23:30:00+00:00
-401234569,2020,3,regular,Louisville,ACC,Miami,ACC,-1.5,1.5,0,0,0.5546749,Won,Won,13.0,2020-09-19 23:30:00+00:00,0.0,13.0,2020-09-19 23:30:00+00:00
-401207106,2020,3,regular,Southern Mississippi,Conference USA,Louisiana Tech,Conference USA,-5.0,-3.0,0,0,0.5313901999999999,Won,Won,1.0,2020-09-19 23:30:00+00:00,0.0,1.0,2020-09-19 23:30:00+00:00
-401234570,2020,3,regular,NC State,ACC,Wake Forest,ACC,1.5,-5.5,1,0,0.57176596,Won,Lost,-3.0,2020-09-20 00:00:00+00:00,1.0,-3.0,2020-09-20 00:00:00+00:00
+game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,regression_spread_result,classification_spread_result,actual_spread,start_date,spread_result
+401245593,2020,3,regular,Baylor,Big 12,Houston,American Athletic,-3.5,-2.0,0,0,0.64286315,,,0.0,2020-09-19 16:00:00+00:00,
+401212522,2020,3,regular,Tulane,American Athletic,Navy,American Athletic,-5.5,-11.5,1,1,0.33308530000000003,Lost,Lost,3.0,2020-09-19 16:00:00+00:00,0.0
+401234567,2020,3,regular,Duke,ACC,Boston College,ACC,-3.5,2.5,0,1,0.46211857,Won,Lost,20.0,2020-09-19 16:00:00+00:00,0.0
+401234571,2020,3,regular,Pittsburgh,ACC,Syracuse,ACC,-21.0,-16.5,0,1,0.4900282,Won,Lost,-11.0,2020-09-19 16:00:00+00:00,0.0
+401236041,2020,3,regular,Oklahoma State,Big 12,Tulsa,American Athletic,-24.0,-5.0,0,1,0.31072903,Won,Lost,-9.0,2020-09-19 16:00:00+00:00,0.0
+401207124,2020,3,regular,Western Kentucky,Conference USA,Liberty,FBS Independents,-15.0,-4.5,0,0,0.6203664000000001,Won,Won,6.0,2020-09-19 16:00:00+00:00,0.0
+401241282,2020,3,regular,Notre Dame,FBS Independents,South Florida,American Athletic,-22.0,-20.0,0,0,0.6958859000000001,Lost,Lost,-52.0,2020-09-19 18:30:00+00:00,1.0
+401235433,2020,3,regular,North Carolina,ACC,Charlotte,Conference USA,-29.5,-20.5,0,1,0.47028786,,,0.0,2020-09-19 19:30:00+00:00,
+401234568,2020,3,regular,Georgia Tech,ACC,UCF,American Athletic,8.0,7.0,1,1,0.44769013,Lost,Lost,28.0,2020-09-19 19:30:00+00:00,0.0
+401207116,2020,3,regular,Georgia Southern,Sun Belt,Florida Atlantic,Conference USA,-3.0,8.0,0,1,0.45144862,,,0.0,2020-09-19 19:30:00+00:00,
+401240640,2020,3,regular,Middle Tennessee,Conference USA,Troy,Sun Belt,2.5,-8.5,1,1,0.37985885,Lost,Lost,33.0,2020-09-19 19:30:00+00:00,0.0
+401236939,2020,3,regular,Marshall,Conference USA,Appalachian State,Sun Belt,5.5,-3.5,1,1,0.40881515,Won,Won,-10.0,2020-09-19 19:30:00+00:00,1.0
+401207120,2020,3,regular,North Texas,Conference USA,SMU,American Athletic,14.5,-4.5,1,0,0.6724449,Lost,Won,30.0,2020-09-19 22:00:00+00:00,0.0
+401215302,2020,3,regular,Louisiana Monroe,Sun Belt,Texas State,Sun Belt,3.5,-12.5,1,0,0.65413964,Lost,Won,21.0,2020-09-19 23:30:00+00:00,0.0
+401234569,2020,3,regular,Louisville,ACC,Miami,ACC,-1.5,1.5,0,0,0.5546749,Won,Won,13.0,2020-09-19 23:30:00+00:00,0.0
+401207106,2020,3,regular,Southern Mississippi,Conference USA,Louisiana Tech,Conference USA,-5.0,-3.0,0,0,0.5313901999999999,Won,Won,1.0,2020-09-19 23:30:00+00:00,0.0
+401234570,2020,3,regular,NC State,ACC,Wake Forest,ACC,1.5,-5.5,1,0,0.57176596,Won,Lost,-3.0,2020-09-20 00:00:00+00:00,1.0
