@@ -1,30 +1,30 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,regression_spread_result,classification_spread_result,actual_spread,start_date,spread_result
 401207132,2020,4,regular,South Alabama,Sun Belt,UAB,Conference USA,7.0,-8.0,1,0,0.5086497,Lost,Won,32.0,2020-09-24 23:30:00+00:00,0.0
 401234596,2020,4,regular,Wake Forest,ACC,Notre Dame,FBS Independents,17.0,13.5,1,0,0.5359290242195129,,,0.0,2020-09-26 16:00:00+00:00,
-401212536,2020,4,regular,East Carolina,American Athletic,UCF,American Athletic,28.0,19.0,1,1,0.46745508909225464,,,0.0,2020-09-26 16:00:00+00:00,
-401235996,2020,4,regular,Oklahoma,Big 12,Kansas State,Big 12,-27.5,-20.0,0,0,0.5350230932235718,,,0.0,2020-09-26 16:00:00+00:00,
-401236952,2020,4,regular,Ole Miss,SEC,Florida,SEC,14.0,2.5,1,1,0.368208110332489,,,0.0,2020-09-26 16:00:00+00:00,
-401237034,2020,4,regular,Auburn,SEC,Kentucky,SEC,-7.0,-11.0,1,1,0.43500518798828125,,,0.0,2020-09-26 16:00:00+00:00,
-401234594,2020,4,regular,Syracuse,ACC,Georgia Tech,ACC,7.5,7.5,1,1,0.49555397033691406,,,0.0,2020-09-26 16:00:00+00:00,
-401234595,2020,4,regular,Pittsburgh,ACC,Louisville,ACC,-3.0,-10.0,1,1,0.3574235439300537,,,0.0,2020-09-26 16:00:00+00:00,
-401207125,2020,4,regular,Charlotte,Conference USA,Georgia State,Sun Belt,3.0,-3.0,1,0,0.517096996307373,,,0.0,2020-09-26 16:00:00+00:00,
-401207126,2020,4,regular,Liberty,FBS Independents,Florida International,Conference USA,-8.0,-9.5,1,0,0.5937318801879883,,,0.0,2020-09-26 17:00:00+00:00,
-401235994,2020,4,regular,TCU,Big 12,Iowa State,Big 12,3.0,-4.0,1,0,0.5912058353424072,,,0.0,2020-09-26 17:30:00+00:00,
-401235997,2020,4,regular,Oklahoma State,Big 12,West Virginia,Big 12,-6.5,-4.0,0,0,0.6391852498054504,,,0.0,2020-09-26 19:30:00+00:00,
+401212536,2020,4,regular,East Carolina,American Athletic,UCF,American Athletic,28.0,19.0,1,1,0.4674550890922546,Won,Won,23.0,2020-09-26 16:00:00+00:00,1.0
+401235996,2020,4,regular,Oklahoma,Big 12,Kansas State,Big 12,-27.5,-20.0,0,0,0.5350230932235718,Won,Won,3.0,2020-09-26 16:00:00+00:00,0.0
+401236952,2020,4,regular,Ole Miss,SEC,Florida,SEC,14.0,2.5,1,1,0.368208110332489,Lost,Lost,16.0,2020-09-26 16:00:00+00:00,0.0
+401237034,2020,4,regular,Auburn,SEC,Kentucky,SEC,-7.0,-11.0,1,1,0.4350051879882813,Won,Won,-16.0,2020-09-26 16:00:00+00:00,1.0
+401234594,2020,4,regular,Syracuse,ACC,Georgia Tech,ACC,7.5,7.5,1,1,0.4955539703369141,Won,Won,-17.0,2020-09-26 16:00:00+00:00,1.0
+401234595,2020,4,regular,Pittsburgh,ACC,Louisville,ACC,-3.0,-10.0,1,1,0.3574235439300537,Push,Push,-3.0,2020-09-26 16:00:00+00:00,1.0
+401207125,2020,4,regular,Charlotte,Conference USA,Georgia State,Sun Belt,3.0,-3.0,1,0,0.5170969963073729,,,0.0,2020-09-26 16:00:00+00:00,
+401207126,2020,4,regular,Liberty,FBS Independents,Florida International,Conference USA,-8.0,-9.5,1,0,0.5937318801879883,Lost,Won,-2.0,2020-09-26 17:00:00+00:00,0.0
+401235994,2020,4,regular,TCU,Big 12,Iowa State,Big 12,3.0,-4.0,1,0,0.5912058353424072,Push,Push,3.0,2020-09-26 17:30:00+00:00,1.0
+401235997,2020,4,regular,Oklahoma State,Big 12,West Virginia,Big 12,-6.5,-4.0,0,0,0.6391852498054504,Lost,Lost,-14.0,2020-09-26 19:30:00+00:00,1.0
 401212530,2020,4,regular,Arkansas State,Sun Belt,Tulsa,American Athletic,-2.5,3.0,0,0,0.5203608870506287,,,0.0,2020-09-26 19:30:00+00:00,
-401235995,2020,4,regular,Texas Tech,Big 12,Texas,Big 12,17.5,9.0,1,0,0.5126668214797974,,,0.0,2020-09-26 19:30:00+00:00,
-401240996,2020,4,regular,Cincinnati,American Athletic,Army,FBS Independents,-12.0,-25.0,1,0,0.5148512125015259,,,0.0,2020-09-26 19:30:00+00:00,
-401237035,2020,4,regular,LSU,SEC,Mississippi State,SEC,-16.5,-15.5,0,1,0.424669086933136,,,0.0,2020-09-26 19:30:00+00:00,
-401240194,2020,4,regular,Louisiana Monroe,Sun Belt,UTEP,Conference USA,-9.5,-4.0,0,0,0.628154993057251,,,0.0,2020-09-26 19:30:00+00:00,
-401237033,2020,4,regular,Arkansas,SEC,Georgia,SEC,28.0,21.0,1,1,0.4867417812347412,,,0.0,2020-09-26 20:00:00+00:00,
-401241303,2020,4,regular,Boston College,ACC,Texas State,Sun Belt,-19.5,-15.5,0,1,0.46626824140548706,,,0.0,2020-09-26 22:00:00+00:00,
+401235995,2020,4,regular,Texas Tech,Big 12,Texas,Big 12,17.5,9.0,1,0,0.5126668214797974,Won,Lost,7.0,2020-09-26 19:30:00+00:00,1.0
+401240996,2020,4,regular,Cincinnati,American Athletic,Army,FBS Independents,-12.0,-25.0,1,0,0.5148512125015259,Won,Lost,-14.0,2020-09-26 19:30:00+00:00,1.0
+401237035,2020,4,regular,LSU,SEC,Mississippi State,SEC,-16.5,-15.5,0,1,0.424669086933136,Won,Lost,10.0,2020-09-26 19:30:00+00:00,0.0
+401240194,2020,4,regular,Louisiana Monroe,Sun Belt,UTEP,Conference USA,-9.5,-4.0,0,0,0.628154993057251,Won,Won,25.0,2020-09-26 19:30:00+00:00,0.0
+401237033,2020,4,regular,Arkansas,SEC,Georgia,SEC,28.0,21.0,1,1,0.4867417812347412,Won,Won,27.0,2020-09-26 20:00:00+00:00,1.0
+401241303,2020,4,regular,Boston College,ACC,Texas State,Sun Belt,-19.5,-15.5,0,1,0.4662682414054871,Won,Lost,-3.0,2020-09-26 22:00:00+00:00,0.0
 401207127,2020,4,regular,Florida Atlantic,Conference USA,South Florida,American Athletic,-3.0,-16.5,1,1,0.3677219748497009,,,0.0,2020-09-26 22:00:00+00:00,
-401236951,2020,4,regular,Missouri,SEC,Alabama,SEC,29.0,22.0,1,0,0.5696191787719727,,,0.0,2020-09-26 23:00:00+00:00,
-401234734,2020,4,regular,Southern Mississippi,Conference USA,Tulane,American Athletic,3.5,4.0,0,0,0.6170036792755127,,,0.0,2020-09-26 23:00:00+00:00,
+401236951,2020,4,regular,Missouri,SEC,Alabama,SEC,29.0,22.0,1,0,0.5696191787719727,Won,Lost,19.0,2020-09-26 23:00:00+00:00,1.0
+401234734,2020,4,regular,Southern Mississippi,Conference USA,Tulane,American Athletic,3.5,4.0,0,0,0.6170036792755127,Won,Won,42.0,2020-09-26 23:00:00+00:00,0.0
 401207130,2020,4,regular,Houston,American Athletic,North Texas,Conference USA,-22.0,2.0,0,0,0.5364763736724854,,,0.0,2020-09-26 23:00:00+00:00,
-401237036,2020,4,regular,South Carolina,SEC,Tennessee,SEC,4.0,5.5,0,0,0.702064037322998,,,0.0,2020-09-26 23:30:00+00:00,
+401237036,2020,4,regular,South Carolina,SEC,Tennessee,SEC,4.0,5.5,0,0,0.7020640373229979,Push,Push,4.0,2020-09-26 23:30:00+00:00,1.0
 401235993,2020,4,regular,Baylor,Big 12,Kansas,Big 12,-17.5,-3.0,0,0,0.676611065864563,,,0.0,2020-09-26 23:30:00+00:00,
 401234593,2020,4,regular,Miami,ACC,Florida State,ACC,-11.5,-1.0,0,1,0.44377750158309937,,,0.0,2020-09-26 23:30:00+00:00,
-401237037,2020,4,regular,Texas A&M,SEC,Vanderbilt,SEC,-30.5,-24.5,0,0,0.5796820521354675,,,0.0,2020-09-26 23:30:00+00:00,
+401237037,2020,4,regular,Texas A&M,SEC,Vanderbilt,SEC,-30.5,-24.5,0,0,0.5796820521354675,Won,Won,-5.0,2020-09-26 23:30:00+00:00,0.0
 401234566,2020,4,regular,Virginia Tech,ACC,NC State,ACC,-6.5,-7.5,1,0,0.7221484184265137,,,0.0,2020-09-27 00:00:00+00:00,
-401236223,2020,4,regular,BYU,FBS Independents,Troy,Sun Belt,-14.5,-8.0,0,1,0.4396687150001526,,,0.0,2020-09-27 02:15:00+00:00,
+401236223,2020,4,regular,BYU,FBS Independents,Troy,Sun Belt,-14.5,-7.5,0,1,0.3849601149559021,,,0.0,2020-09-27 02:15:00+00:00,
