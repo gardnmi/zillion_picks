@@ -23,8 +23,8 @@ game_id,season,week,season_type,home_team,home_conference,away_team,away_confere
 401234734,2020,4,regular,Southern Mississippi,Conference USA,Tulane,American Athletic,3.5,4.0,0,0,0.6170036792755127,Won,Won,42.0,2020-09-26 23:00:00+00:00,0.0
 401207130,2020,4,regular,Houston,American Athletic,North Texas,Conference USA,-22.0,2.0,0,0,0.5364763736724854,,,0.0,2020-09-26 23:00:00+00:00,
 401237036,2020,4,regular,South Carolina,SEC,Tennessee,SEC,4.0,5.5,0,0,0.7020640373229979,Push,Push,4.0,2020-09-26 23:30:00+00:00,1.0
-401235993,2020,4,regular,Baylor,Big 12,Kansas,Big 12,-17.5,-3.0,0,0,0.676611065864563,,,0.0,2020-09-26 23:30:00+00:00,
-401234593,2020,4,regular,Miami,ACC,Florida State,ACC,-11.5,-1.0,0,1,0.44377750158309937,,,0.0,2020-09-26 23:30:00+00:00,
+401235993,2020,4,regular,Baylor,Big 12,Kansas,Big 12,-17.5,-3.0,0,0,0.676611065864563,Lost,Lost,-33.0,2020-09-26 23:30:00+00:00,1.0
+401234593,2020,4,regular,Miami,ACC,Florida State,ACC,-11.5,-1.0,0,1,0.44377750158309937,Lost,Won,-42.0,2020-09-26 23:30:00+00:00,1.0
 401237037,2020,4,regular,Texas A&M,SEC,Vanderbilt,SEC,-30.5,-24.5,0,0,0.5796820521354675,Won,Won,-5.0,2020-09-26 23:30:00+00:00,0.0
-401234566,2020,4,regular,Virginia Tech,ACC,NC State,ACC,-6.5,-7.5,1,0,0.7221484184265137,,,0.0,2020-09-27 00:00:00+00:00,
-401236223,2020,4,regular,BYU,FBS Independents,Troy,Sun Belt,-14.5,-7.5,0,1,0.3849601149559021,,,0.0,2020-09-27 02:15:00+00:00,
+401234566,2020,4,regular,Virginia Tech,ACC,NC State,ACC,-6.5,-7.5,1,0,0.7221484184265137,Won,Lost,-21.0,2020-09-27 00:00:00+00:00,1.0
+401236223,2020,4,regular,BYU,FBS Independents,Troy,Sun Belt,-14.5,-7.5,0,1,0.3849601149559021,Lost,Won,-41.0,2020-09-27 02:15:00+00:00,1.0
