@@ -1,26 +1,25 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,regression_spread_result,classification_spread_result,actual_spread,start_date,spread_result
-401234607,2020,6,regular,North Carolina,ACC,Virginia Tech,ACC,-3.0,-3.5,1,0,0.5258256,,,0.0,2020-10-10 16:00:00+00:00,
-401237102,2020,6,regular,Texas A&M,SEC,Florida,SEC,6.0,-4.5,1,1,0.35905963,,,0.0,2020-10-10 16:00:00+00:00,
-401237105,2020,6,regular,LSU,SEC,Missouri,SEC,-20.5,-19.5,0,0,0.65705854,,,0.0,2020-10-10 16:00:00+00:00,
-401237106,2020,6,regular,Vanderbilt,SEC,South Carolina,SEC,13.5,3.0,1,0,0.5337068,,,0.0,2020-10-10 16:00:00+00:00,
-401234608,2020,6,regular,Virginia,ACC,NC State,ACC,-7.0,-7.0,1,1,0.41430652,,,0.0,2020-10-10 16:00:00+00:00,
-401236005,2020,6,regular,Oklahoma,Big 12,Texas,Big 12,-3.0,-13.0,1,1,0.18562746,,,0.0,2020-10-10 16:00:00+00:00,
-401207215,2020,6,regular,Liberty,FBS Independents,Louisiana Monroe,Sun Belt,-17.0,-13.5,0,0,0.6385987,,,0.0,2020-10-10 16:00:00+00:00,
-401234605,2020,6,regular,Syracuse,ACC,Duke,ACC,1.0,0.0,1,0,0.66505563,,,0.0,2020-10-10 16:30:00+00:00,
-401236003,2020,6,regular,Iowa State,Big 12,Texas Tech,Big 12,-12.0,-2.0,0,1,0.3768704,,,0.0,2020-10-10 19:30:00+00:00,
-401215308,2020,6,regular,Troy,Sun Belt,Texas State,Sun Belt,-7.0,-6.5,0,0,0.60609424,,,0.0,2020-10-10 19:30:00+00:00,
-401237103,2020,6,regular,Georgia,SEC,Tennessee,SEC,-12.5,-4.0,0,0,0.6384153,,,0.0,2020-10-10 19:30:00+00:00,
-401234603,2020,6,regular,Boston College,ACC,Pittsburgh,ACC,6.5,-1.5,1,1,0.31071794,,,0.0,2020-10-10 20:00:00+00:00,
-401237101,2020,6,regular,Auburn,SEC,Arkansas,SEC,-14.0,-13.0,0,0,0.569592,,,0.0,2020-10-10 20:00:00+00:00,
-401236004,2020,6,regular,TCU,Big 12,Kansas State,Big 12,-9.0,-4.0,0,0,0.58197606,,,0.0,2020-10-10 20:00:00+00:00,
-401207143,2020,6,regular,Florida International,Conference USA,Middle Tennessee,Conference USA,-6.5,-8.5,1,1,0.39456403,,,0.0,2020-10-10 20:00:00+00:00,
-401207144,2020,6,regular,Southern Mississippi,Conference USA,Florida Atlantic,Conference USA,2.5,11.5,0,0,0.6448942,,,0.0,2020-10-10 20:00:00+00:00,
-401212515,2020,6,regular,Navy,American Athletic,Temple,American Athletic,3.5,1.0,1,1,0.44537127,,,0.0,2020-10-10 22:00:00+00:00,
-401212477,2020,6,regular,South Florida,American Athletic,East Carolina,American Athletic,-6.0,9.0,0,0,0.6621691,,,0.0,2020-10-10 23:00:00+00:00,
-401234606,2020,6,regular,Notre Dame,FBS Independents,Florida State,ACC,-21.0,-20.0,0,1,0.32979888,,,0.0,2020-10-10 23:30:00+00:00,
-401237104,2020,6,regular,Kentucky,SEC,Mississippi State,SEC,-3.0,-3.0,1,1,0.3592263,,,0.0,2020-10-10 23:30:00+00:00,
-401237100,2020,6,regular,Ole Miss,SEC,Alabama,SEC,24.0,17.0,1,1,0.42216867,,,0.0,2020-10-10 23:30:00+00:00,
-401207145,2020,6,regular,Louisiana Tech,Conference USA,UTEP,Conference USA,-14.5,-19.0,1,1,0.44497937,,,0.0,2020-10-10 23:30:00+00:00,
-401234604,2020,6,regular,Clemson,ACC,Miami,ACC,-14.5,-10.5,0,0,0.7492001,,,0.0,2020-10-10 23:30:00+00:00,
-401207146,2020,6,regular,Western Kentucky,Conference USA,Marshall,Conference USA,7.0,-4.0,1,1,0.48640025,,,0.0,2020-10-10 23:30:00+00:00,
-401207142,2020,6,regular,North Texas,Conference USA,Charlotte,Conference USA,3.0,-2.0,1,0,0.5832392,,,0.0,2020-10-11 00:00:00+00:00,
+401234607,2020,6,regular,North Carolina,ACC,Virginia Tech,ACC,-3.0,-3.5,1,0,0.5258255999999999,Won,Lost,-11.0,2020-10-10 16:00:00+00:00,1.0
+401237102,2020,6,regular,Texas A&M,SEC,Florida,SEC,6.0,-4.5,1,1,0.35905963,Won,Won,-3.0,2020-10-10 16:00:00+00:00,1.0
+401237105,2020,6,regular,LSU,SEC,Missouri,SEC,-20.5,-19.5,0,0,0.65705854,Won,Won,4.0,2020-10-10 16:00:00+00:00,0.0
+401237106,2020,6,regular,Vanderbilt,SEC,South Carolina,SEC,13.5,3.0,1,0,0.5337068,Lost,Won,34.0,2020-10-10 16:00:00+00:00,0.0
+401234608,2020,6,regular,Virginia,ACC,NC State,ACC,-7.0,-7.0,1,1,0.41430652,Lost,Lost,17.0,2020-10-10 16:00:00+00:00,0.0
+401236005,2020,6,regular,Oklahoma,Big 12,Texas,Big 12,-3.0,-13.0,1,1,0.18562746,Won,Won,-8.0,2020-10-10 16:00:00+00:00,1.0
+401207215,2020,6,regular,Liberty,FBS Independents,Louisiana Monroe,Sun Belt,-17.0,-13.5,0,0,0.6385987,Lost,Lost,-33.0,2020-10-10 16:00:00+00:00,1.0
+401234605,2020,6,regular,Syracuse,ACC,Duke,ACC,1.0,0.0,1,0,0.66505563,Lost,Won,14.0,2020-10-10 16:30:00+00:00,0.0
+401236003,2020,6,regular,Iowa State,Big 12,Texas Tech,Big 12,-12.0,-2.0,0,1,0.3768704,Lost,Won,-16.0,2020-10-10 19:30:00+00:00,1.0
+401215308,2020,6,regular,Troy,Sun Belt,Texas State,Sun Belt,-7.0,-6.5,0,0,0.60609424,Lost,Lost,-20.0,2020-10-10 19:30:00+00:00,1.0
+401237103,2020,6,regular,Georgia,SEC,Tennessee,SEC,-12.5,-4.0,0,0,0.6384153,Lost,Lost,-23.0,2020-10-10 19:30:00+00:00,1.0
+401234603,2020,6,regular,Boston College,ACC,Pittsburgh,ACC,6.5,-1.5,1,1,0.31071794,Won,Won,-1.0,2020-10-10 20:00:00+00:00,1.0
+401237101,2020,6,regular,Auburn,SEC,Arkansas,SEC,-14.0,-13.0,0,0,0.569592,Won,Won,-2.0,2020-10-10 20:00:00+00:00,0.0
+401236004,2020,6,regular,TCU,Big 12,Kansas State,Big 12,-9.0,-4.0,0,0,0.58197606,Won,Won,7.0,2020-10-10 20:00:00+00:00,0.0
+401207143,2020,6,regular,Florida International,Conference USA,Middle Tennessee,Conference USA,-6.5,-8.5,1,1,0.39456403,Lost,Lost,3.0,2020-10-10 20:00:00+00:00,0.0
+401212515,2020,6,regular,Navy,American Athletic,Temple,American Athletic,3.5,1.0,1,1,0.44537127,Won,Won,-2.0,2020-10-10 22:00:00+00:00,1.0
+401212477,2020,6,regular,South Florida,American Athletic,East Carolina,American Athletic,-6.0,9.0,0,0,0.6621691,Won,Won,20.0,2020-10-10 23:00:00+00:00,0.0
+401234606,2020,6,regular,Notre Dame,FBS Independents,Florida State,ACC,-21.0,-20.0,0,1,0.32979888,Won,Lost,-16.0,2020-10-10 23:30:00+00:00,0.0
+401237104,2020,6,regular,Kentucky,SEC,Mississippi State,SEC,-3.0,-3.0,1,1,0.3592263,Won,Won,-22.0,2020-10-10 23:30:00+00:00,1.0
+401237100,2020,6,regular,Ole Miss,SEC,Alabama,SEC,24.0,17.0,1,1,0.42216867,Won,Won,15.0,2020-10-10 23:30:00+00:00,1.0
+401207145,2020,6,regular,Louisiana Tech,Conference USA,UTEP,Conference USA,-14.5,-19.0,1,1,0.44497937,Lost,Lost,-4.0,2020-10-10 23:30:00+00:00,0.0
+401234604,2020,6,regular,Clemson,ACC,Miami,ACC,-14.5,-10.5,0,0,0.7492001,Lost,Lost,-25.0,2020-10-10 23:30:00+00:00,1.0
+401207146,2020,6,regular,Western Kentucky,Conference USA,Marshall,Conference USA,7.0,-4.0,1,1,0.48640025,Lost,Lost,24.0,2020-10-10 23:30:00+00:00,0.0
+401207142,2020,6,regular,North Texas,Conference USA,Charlotte,Conference USA,3.0,-2.0,1,0,0.5832392,Lost,Won,28.0,2020-10-11 00:00:00+00:00,0.0
