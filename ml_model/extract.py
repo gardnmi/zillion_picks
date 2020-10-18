@@ -11,14 +11,12 @@ import logging
 from datetime import datetime
 from tenacity import retry, stop_after_attempt, wait_exponential, after_log
 
+# Setup Logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-
 formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
-
 file_handler = logging.FileHandler('extract.log')
 file_handler.setFormatter(formatter)
-
 logger.addHandler(file_handler)
 
 
@@ -313,74 +311,90 @@ def roster_aggregation(seasons, teams, filepath):
 
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
-def past_weather_extract(filepath, api_key):
+def roster(seasons, teams, filepath):
 
-    for file in filepath.rglob('games.csv'):
+    for season in seasons:
 
-        # https://www.worldweatheronline.com/developer/api/docs/local-city-town-weather-api.aspx
+        team_dfs = []
+        for team in teams:
 
-        games_df = pd.read_csv(file, parse_dates=['start_date'])
-        games_df = games_df[['start_date', 'venue_id', 'id']].rename(columns={
-                                                                     'id': 'game_id'})
+            df = pd.read_json(
+                f'https://api.collegefootballdata.com/roster?team={urllib.parse.quote(team)}&year={season}')
 
-        venues_df = pd.read_csv(
-            filepath/'venues.csv').dropna(subset=['location'])
-        venues_df = venues_df[['name', 'location', 'id']].rename(
-            columns={'id': 'venue_id'})
-
-        venues_games_df = venues_df.merge(games_df, on='venue_id', how='left').dropna(
-            subset=['start_date'])[['name', 'location', 'start_date', 'game_id', 'venue_id']]
-
-        venues_games_df['location'] = venues_games_df['location'].map(
-            lambda x: ast.literal_eval(x)).map(lambda x: f"{x['x']},{x['y']}")
-        group = venues_games_df.groupby(['name', 'location', 'venue_id'])
-
-        # api_key = '2a34a2fcead249289cb30207202403'
-        # api_key = '0edf5aa7fc4e419681a135604202403'
-        # api_key = 'fcc47f9b3f114655bd9202732202403'
-        # api_key = '83470e7f0fab4852a36163453201304'
-        # api_key = 'f19ba43b5a934231ad7165834201304'
-        # api_key = '1123680e2ad1465f9db171642201304'
-
-        for key, group_df in group:
-            try:
-                prior_df = pd.read_csv(filepath/f'weather/{str(key[2])}.csv')
-                games = prior_df['game_id'].to_list()
-            except:
-                games = []
-
-            print(f'reading api {key[2]}')
-            dfs = []
-            for date, game_id in zip(group_df['start_date'], group_df['game_id']):
-                if game_id in games:
-                    pass
-                else:
-                    url = f'http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key={api_key}&q={key[1]}&format=json&date={date.date()}&tp=24'
-                    print(url)
-                    data = requests.get(url).json()
-                    weather_df = pd.DataFrame(
-                        data['data']['weather'][0]['hourly'])
-                    weather_df['name'] = key[0]
-                    weather_df['start_date'] = date
-                    weather_df['game_id'] = int(game_id)
-                    weather_df['venue_id'] = key[2]
-
-                    dfs.append(weather_df)
-
-            try:
-                df = pd.concat(dfs, axis=0, ignore_index=True)
-
-                try:
-                    df = pd.concat([prior_df, df], axis=0, ignore_index=True)
-                    df.to_csv(filepath/f'weather/{key[2]}.csv', index=False)
-                    del df, prior_df
-                    print('updating')
-                except:
-                    df.to_csv(filepath/f'weather/{key[2]}.csv', index=False)
-                    del df
-                    print('new')
-
-            except:
-                del prior_df
-                print('skipped')
+            if len(df) == 0:
                 pass
+
+            else:
+                df['team'] = team
+                team_dfs.append(df)
+        try:
+            df = pd.concat(team_dfs, axis=0, ignore_index=True)
+            df['season'] = season
+            df.to_csv(filepath/f'seasons/{season}/roster.csv', index=False)
+        except ValueError:
+            pass
+
+
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=4, max=10), after=after_log(logger, logging.DEBUG))
+def games_stat_extract_alt(seasons=[folder.name for folder in Path('data/seasons/').iterdir() if folder.is_dir()], filepath=Path('data/')):
+
+    for season in seasons:
+        games = pd.read_csv(filepath/f'seasons/{season}/games.csv').id
+
+        games_df = []
+        for game_id in games:
+
+            url = f'https://api.collegefootballdata.com/games/teams?year={season}&gameId={game_id}'
+            data = requests.get(url).json()
+            print(url)
+            if len(data) > 0:
+
+                subdata_dfs = []
+                for subdata in data:
+                    teams_dfs = []
+                    for team in subdata['teams']:
+
+                        df = pd.DataFrame(
+                            team['stats']).set_index('category').T
+                        df['game_id'] = game_id
+                        df['school'] = team['school']
+                        df['home_away'] = team['homeAway']
+                        df['points_scored'] = team['points']
+
+                        teams_dfs.append(df)
+
+                    df = pd.concat(teams_dfs, axis=0)
+                    df = df.fillna(0)
+
+                    subdata_dfs.append(df)
+
+                df = pd.concat(subdata_dfs, axis=0, ignore_index=True)
+                games_df.append(df)
+
+            else:
+                pass
+
+        df = pd.concat(games_df, axis=0, ignore_index=True)
+
+        # Transform Columns
+        split_columns = ['thirdDownEff', 'fourthDownEff', 'completionAttempts']
+        for column in split_columns:
+
+            success_column = f'{column}Success'
+            attempt_column = f'{column}Attempts'
+
+            df[[success_column, attempt_column]] = df[column].str.split(
+                '-', expand=True).iloc[:, :2].astype(float)
+            df[column] = df[success_column] / df[attempt_column]
+
+        df[['totalPenalties', 'totalPenaltiesYards']] = df['totalPenaltiesYards'].str.split(
+            '-', n=1, expand=True).astype(float)
+
+        df['possessionTime'] = df['possessionTime'].fillna('00:00')
+        df['possessionTime'] = df['possessionTime'].replace(0, '00:00')
+        df['possessionTime'] = pd.to_timedelta(
+            df['possessionTime'] + ':00').dt.total_seconds()
+
+        df = df.fillna(0)
+        df.to_csv(
+            filepath/f'seasons/{season}/games_stats_alt.csv', index=False)

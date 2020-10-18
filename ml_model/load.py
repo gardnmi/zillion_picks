@@ -13,6 +13,7 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
         venues_extract(filepath)
         games_extract(update_seasons, filepath)
         games_stat_extract(update_seasons, teams, filepath)
+        # games_stat_extract_alt(update_seasons, filepath)
         games_advance_stats_extract(update_seasons, filepath)
         talent_extract(update_seasons, filepath)
         lines_extract(update_seasons, filepath)
@@ -20,6 +21,7 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
         recruiting_position_extract(update_seasons, filepath)
         pregame_extract(update_seasons, filepath)
         roster_aggregation(update_seasons, teams, filepath)
+        roster(update_seasons, teams, filepath)
 
         # Updated once a season
         try:
@@ -166,16 +168,17 @@ def dataset(predict_week, predict_season, filepath=Path('data'), window_size=4, 
     df = df.merge(home_talent_df, on=['home_team', 'season'], how='left')
     df = df.merge(away_talent_df, on=['away_team', 'season'], how='left')
 
-    # Create Rolling Mean for Spread and Result
-    df['spread_diff_rolling'] = df['pre_game_spread'] - df['spread_target']
-    df['spread_result_rolling'] = np.where(
+    # Create Rolling Mean for Spread Diff and Result
+    df['spread_diff'] = df['pre_game_spread'] - df['spread_target']
+    df['spread_result'] = np.where(
         df['spread_target'] <= df['pre_game_spread'], 1, 0)
 
-    df[['spread_diff_rolling', 'spread_result_rolling']] = df.groupby('home_id')[['spread_diff_rolling', 'spread_result_rolling']].transform(
-        lambda df: df.shift(1).rolling(8, min_periods=0).mean()).fillna(df[['spread_diff_rolling', 'spread_result_rolling']].mean())
+    df[['home_spread_diff_rolling', 'home_spread_result_rolling']] = df.groupby('home_id')[['spread_diff', 'spread_result']].transform(
+        lambda df: df.shift(1).rolling(6, min_periods=0).mean()).fillna(df[['spread_diff', 'spread_result']].mean())
 
-    # Weather
-    # df = df.merge(weather_df, on='game_id', how='left').fillna(weather_df.mean())
-    # df['weatherDesc'] = df.weatherDesc.fillna('Sunny')
+    df[['away_spread_diff_rolling', 'away_spread_result_rolling']] = df.groupby('away_id')[['spread_diff', 'spread_result']].transform(
+        lambda df: df.shift(1).rolling(6, min_periods=0).mean()).fillna(df[['spread_diff', 'spread_result']].mean())
+
+    df = df.drop(['spread_result', 'spread_diff'], axis=1)
 
     return df
