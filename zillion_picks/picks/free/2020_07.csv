@@ -1,30 +1,24 @@
 game_id,season,week,season_type,home_team,home_conference,away_team,away_conference,pre_game_spread,predicted_spread,regression_spread_pred,classification_spread_pred,classification_confidence,regression_spread_result,classification_spread_result,actual_spread,start_date,spread_result
-401236006,2020,7,regular,Baylor,Big 12,Oklahoma State,Big 12,7.0,4.5,1,1,0.7107351,,,0.0,2020-10-17 04:00:00+00:00,
 401215313,2020,7,regular,South Alabama,Sun Belt,Texas State,Sun Belt,-3.5,3.5,0,1,0.5268999934196472,Lost,Won,-10.0,2020-10-17 16:00:00+00:00,1.0
 401234614,2020,7,regular,Miami,ACC,Pittsburgh,ACC,-13.0,-10.0,0,1,0.5495947003364563,Won,Lost,-12.0,2020-10-17 16:00:00+00:00,0.0
 401212478,2020,7,regular,Temple,American Athletic,South Florida,American Athletic,-13.0,-1.5,0,0,0.7222173810005188,Won,Won,-2.0,2020-10-17 16:00:00+00:00,0.0
 401237111,2020,7,regular,Tennessee,SEC,Kentucky,SEC,-6.5,-10.5,1,0,0.510851263999939,Lost,Won,27.0,2020-10-17 16:00:00+00:00,0.0
 401237109,2020,7,regular,South Carolina,SEC,Auburn,SEC,3.0,5.0,0,1,0.7079875469207764,Lost,Won,-8.0,2020-10-17 16:00:00+00:00,1.0
-401212532,2020,7,regular,Tulsa,American Athletic,Cincinnati,American Athletic,3.5,8.5,0,1,0.5855883955955505,,,0.0,2020-10-17 16:00:00+00:00,
 401212548,2020,7,regular,East Carolina,American Athletic,Navy,American Athletic,3.0,4.0,0,0,0.6053959131240845,Won,Won,4.0,2020-10-17 16:00:00+00:00,0.0
 401234615,2020,7,regular,Syracuse,ACC,Liberty,FBS Independents,3.0,-2.0,1,1,0.5506102442741394,Lost,Lost,17.0,2020-10-17 16:00:00+00:00,0.0
 401234610,2020,7,regular,Georgia Tech,ACC,Clemson,ACC,27.0,15.5,1,1,0.5066769123077393,Lost,Lost,66.0,2020-10-17 16:00:00+00:00,0.0
 401236007,2020,7,regular,West Virginia,Big 12,Kansas,Big 12,-22.0,-7.0,0,0,0.5082415342330933,Won,Won,-21.0,2020-10-17 16:00:00+00:00,0.0
 401207153,2020,7,regular,UAB,Conference USA,Western Kentucky,Conference USA,-13.5,5.0,0,0,0.8287371397018433,Lost,Lost,-23.0,2020-10-17 17:30:00+00:00,1.0
 401234613,2020,7,regular,Notre Dame,FBS Independents,Louisville,ACC,-17.0,-21.0,1,1,0.5988016724586487,Lost,Lost,-5.0,2020-10-17 18:30:00+00:00,0.0
-401234611,2020,7,regular,NC State,ACC,Duke,ACC,-3.5,2.5,0,0,0.6092240810394287,,,0.0,2020-10-17 19:30:00+00:00,
-401239872,2020,7,regular,Troy,Sun Belt,Eastern Kentucky,MISSING,-28.5,-30.0,1,0,0.5547437071800232,,,0.0,2020-10-17 19:30:00+00:00,
-401212537,2020,7,regular,Memphis,American Athletic,UCF,American Athletic,3.0,6.0,0,1,0.6072285771369934,,,0.0,2020-10-17 19:30:00+00:00,
-401237108,2020,7,regular,Arkansas,SEC,Ole Miss,SEC,-1.0,8.0,0,0,0.6189509630203247,,,0.0,2020-10-17 19:30:00+00:00,
-401237110,2020,7,regular,Florida,SEC,LSU,SEC,-11.5,-2.0,0,1,0.7499284148216248,,,0.0,2020-10-17 20:00:00+00:00,
-401237112,2020,7,regular,Mississippi State,SEC,Texas A&M,SEC,4.5,2.0,1,0,0.6079829931259155,,,0.0,2020-10-17 20:00:00+00:00,
-401250215,2020,7,regular,Georgia Southern,Sun Belt,UMass,FBS Independents,-30.5,-17.5,0,1,0.5264473557472229,,,0.0,2020-10-17 20:00:00+00:00,
-401234616,2020,7,regular,Wake Forest,ACC,Virginia,ACC,-2.5,-0.5,0,0,0.6791864037513733,,,0.0,2020-10-17 20:00:00+00:00,
-401207150,2020,7,regular,Middle Tennessee,Conference USA,North Texas,Conference USA,-3.5,-6.5,1,1,0.5513124465942383,,,0.0,2020-10-17 21:00:00+00:00,
-401207149,2020,7,regular,Louisiana Tech,Conference USA,Marshall,Conference USA,12.0,-0.5,1,0,0.5054043531417847,,,0.0,2020-10-17 22:00:00+00:00,
-401237113,2020,7,regular,Missouri,SEC,Vanderbilt,SEC,-20.0,-6.5,0,0,0.7108766436576843,,,0.0,2020-10-17 23:30:00+00:00,
-401234612,2020,7,regular,Florida State,ACC,North Carolina,ACC,13.5,6.5,1,1,0.6425211429595947,,,0.0,2020-10-17 23:30:00+00:00,
-401207152,2020,7,regular,UTEP,Conference USA,Southern Mississippi,Conference USA,6.5,7.5,0,0,0.6499225497245789,,,0.0,2020-10-17 23:30:00+00:00,
-401234609,2020,7,regular,Virginia Tech,ACC,Boston College,ACC,-13.0,-8.0,0,0,0.6371919512748718,,,0.0,2020-10-18 00:00:00+00:00,
-401207148,2020,7,regular,Charlotte,Conference USA,Florida International,Conference USA,-7.0,-4.0,0,1,0.6348152756690979,,,0.0,2020-10-18 00:00:00+00:00,
-401237107,2020,7,regular,Alabama,SEC,Georgia,SEC,-6.0,1.0,0,0,0.7009278535842896,,,0.0,2020-10-18 00:00:00+00:00,
+401234611,2020,7,regular,NC State,ACC,Duke,ACC,-3.5,2.5,0,0,0.6092240810394287,Lost,Lost,-11.0,2020-10-17 19:30:00+00:00,1.0
+401239872,2020,7,regular,Troy,Sun Belt,Eastern Kentucky,MISSING,-28.5,-30.0,1,0,0.5547437071800232,Lost,Won,-2.0,2020-10-17 19:30:00+00:00,0.0
+401212537,2020,7,regular,Memphis,American Athletic,UCF,American Athletic,3.0,6.0,0,1,0.6072285771369934,Lost,Won,-1.0,2020-10-17 19:30:00+00:00,1.0
+401237108,2020,7,regular,Arkansas,SEC,Ole Miss,SEC,-1.0,8.0,0,0,0.6189509630203247,Lost,Lost,-12.0,2020-10-17 19:30:00+00:00,1.0
+401237112,2020,7,regular,Mississippi State,SEC,Texas A&M,SEC,4.5,2.0,1,0,0.6079829931259155,Lost,Won,14.0,2020-10-17 20:00:00+00:00,0.0
+401250215,2020,7,regular,Georgia Southern,Sun Belt,UMass,FBS Independents,-30.5,-17.5,0,1,0.5264473557472229,Lost,Won,-41.0,2020-10-17 20:00:00+00:00,1.0
+401234616,2020,7,regular,Wake Forest,ACC,Virginia,ACC,-2.5,-0.5,0,0,0.6791864037513733,Lost,Lost,-17.0,2020-10-17 20:00:00+00:00,1.0
+401207150,2020,7,regular,Middle Tennessee,Conference USA,North Texas,Conference USA,-3.5,-6.5,1,1,0.5513124465942383,Lost,Lost,17.0,2020-10-17 21:00:00+00:00,0.0
+401207149,2020,7,regular,Louisiana Tech,Conference USA,Marshall,Conference USA,12.0,-0.5,1,0,0.5054043531417847,Lost,Won,18.0,2020-10-17 22:00:00+00:00,0.0
+401234612,2020,7,regular,Florida State,ACC,North Carolina,ACC,13.5,6.5,1,1,0.6425211429595947,Won,Won,-3.0,2020-10-17 23:30:00+00:00,1.0
+401234609,2020,7,regular,Virginia Tech,ACC,Boston College,ACC,-13.0,-8.0,0,0,0.6371919512748718,Lost,Lost,-26.0,2020-10-18 00:00:00+00:00,1.0
+401237107,2020,7,regular,Alabama,SEC,Georgia,SEC,-6.0,1.0,0,0,0.7009278535842896,Lost,Lost,-17.0,2020-10-18 00:00:00+00:00,1.0
